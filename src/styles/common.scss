@@ -1,0 +1,71 @@
+@import './variables.scss';
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Gilroy';
+  background: linear-gradient(180deg, #B4BCD2 -4.52%, #516A87 100%) no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  min-width: 1100px;
+}
+
+button {
+  outline: none;
+  border: none;
+  color: #fff;
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1301px;
+  min-width: 1100px;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.big-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1330px;
+  min-width: 1100px;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.page-content {
+  padding-top: $header-height;
+  height: calc(100vh - 51px);
+  min-height: 600px;
+  min-width: 1100px;
+  flex: 1 0 auto;
+}
+
+.social__link {
+  width: 47px;
+  height: 47px;
+  background: #ffffff40;
+  transition: all .2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 50%;
+  text-decoration: none;
+  &:hover {
+    background: #ffffff60;
+  }
+}

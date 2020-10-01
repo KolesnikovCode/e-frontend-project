@@ -1,18 +1,35 @@
-import React from "react";
-import "./App.scss";
+import React from "react"
+import "./styles/index.scss"
+import 'animate.css'
+import { Switch, Route, withRouter } from "react-router-dom"
+import { Provider } from "react-redux"
+import { createStore } from "redux"
+import reducer from "./redux/reducer"
+import IndexPage from "./pages/index/IndexPage"
+import Header from "./components/core/Header"
+import Footer from "./components/core/Footer"
 
-import Header from "./components/header/Header";
-import Body from "./components/body/Body";
-import Footer from "./components/footer/Footer";
+const store = createStore(reducer)
 
-const App: React.FC<{}> = () => {
+const app = ({ location }: any) => {
+
   return (
-    <div className="App">
-      <Header />
-      <Body />
-      <Footer />
-    </div>
-  );
-};
+    <Provider store={store}>
 
-export default App;
+      <Header />
+
+      <div className="page-content">
+        <Switch>
+
+          <Route path="/" exact component={ IndexPage } />
+
+        </Switch>
+      </div>
+
+      <Footer />
+
+    </Provider>
+  )
+}
+
+export default withRouter(app)

@@ -1,0 +1,58 @@
+.footer {
+  flex: 0 0 auto;
+  background: #000;
+  width: 100%;
+  padding: 95px 0 165px 0;
+  color: #fff;
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &-left {
+      display: flex;
+      flex-direction: column;
+      &__links {
+        padding-top: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        a {
+          position: relative;
+          text-decoration: none;
+          color: #fff;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 18px;
+          &:not(:first-child) {
+            margin-top: 15px;
+          }
+          &::before {
+            content: '';
+            transition: all .2s ease-in-out;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            height: 2px;
+            width: 0;
+            background: #fff;
+            opacity: 0;
+          }
+          &:hover {
+            &::before {
+              width: 30px;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    &-right {
+      padding-top: 40px;
+      display: flex;
+      flex-wrap: nowrap;
+      &__link {
+       margin-left: 9px;
+      }
+    }
+  }
+}

@@ -1,18 +1,17 @@
-import actionTypes from "./actionTypes";
-import I from "immutable";
+// import actionTypes from "./actionTypes"
 
 export type Action = {
-  type: string;
-  data: any;
-};
+  type: string
+  data: any
+}
 
-export default function(state = I.Map(), action: Action) {
-  console.log("prevStore(from reducer.ts) = ", state.toJS());
+const initialState = {
+  products: []
+}
+
+export default function(state = initialState, action: Action) {
   switch (action.type) {
-    case actionTypes.SET_COUNTER: {
-      return state.set("counter", action.data);
-    }
     default:
-      return state;
+      return state
   }
 }

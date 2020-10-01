@@ -1,0 +1,15 @@
+@import './variables.scss';
+
+@mixin actionButtonMixin {
+  backdrop-filter: blur(30px);
+  border-radius: 40px;
+  cursor: pointer;
+  background: $main-btn-color;
+  transition: all .2s ease-in-out;
+  &:hover {
+    opacity: .8;
+  }
+  &:active {
+    opacity: .9;
+  }
+}
