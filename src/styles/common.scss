@@ -6,6 +6,10 @@
   height: 100%;
 }
 
+html,body {
+  min-width: 1100px;
+}
+
 body {
   margin: 0;
   font-family: 'Gilroy';
@@ -13,7 +17,6 @@ body {
   background-size: cover;
   width: 100%;
   min-height: 100vh;
-  min-width: 1100px;
 }
 
 button {
@@ -67,5 +70,24 @@ button {
   text-decoration: none;
   &:hover {
     background: #ffffff60;
+  }
+}
+
+.small-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  user-select: none;
+  background: linear-gradient(180deg, #B4BCD2 -4.52%, #516A87 100%) no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: none;
+  padding: 0 15px;
+  box-sizing: border-box;
+  @media screen and (max-width: 1100px) {
+    display: flex;
   }
 }

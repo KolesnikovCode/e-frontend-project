@@ -8,13 +8,16 @@ import reducer from "./redux/reducer"
 import IndexPage from "./pages/index/IndexPage"
 import Header from "./components/core/Header"
 import Footer from "./components/core/Footer"
+import SmallScreenAlert from './components/core/SmallScreenAlert'
 
 const store = createStore(reducer)
 
-const app = ({ location }: any) => {
+const app = () => {
 
   return (
     <Provider store={store}>
+
+      <SmallScreenAlert />
 
       <Header />
 
