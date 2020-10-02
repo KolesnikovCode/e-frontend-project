@@ -13,8 +13,14 @@ import PageContent from "./layouts/page-content/PageContent"
 
 const store = createStore(reducer)
 
-const app = () => {
+const app = ({ history }: any) => {
 
+  // Scroll window to top on change route
+  history.listen(() => {
+    window.scrollTo(0, 0);
+  });
+ 
+  
   return (
     <Provider store={store}>
 

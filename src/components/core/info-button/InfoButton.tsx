@@ -1,5 +1,6 @@
 import React from 'react'
-import InfoIcon from '../../assets/images/info-icon.svg'
+import InfoIcon from '../../../assets/images/info-icon.svg'
+import './info-button.scss'
 
 interface IProps {
   onClick: () => any

@@ -1,0 +1,19 @@
+@import '../../../styles/variables.scss';
+
+.info-button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  background: $main-btn-color;
+  transition: all .2s ease-in-out;
+  &:hover {
+    opacity: .8;
+  }
+  &:active {
+    opacity: .9;
+  }
+}

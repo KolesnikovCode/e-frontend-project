@@ -2,14 +2,31 @@ import React from 'react'
 import './index-page.scss'
 import BigLogo from '../../assets/images/big-logo.svg'
 import { useTitlePage } from '../../hooks'
+import ContentContainer from '../../layouts/content-container/ContentContainer'
+import InfoButton from '../../components/core/info-button/InfoButton'
 
 const IndexPage = () => {
   // Change title
   useTitlePage('E A S Y - меняться - легко')
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
+  const handleInfoBtnClick = () => {
+    console.log('Info button click');
+  };
+
   return (
     <div className="home animate__animated animate__fadeIn">
-      <div className="container">
+      
+      <ContentContainer>
+
+        <div className="info-btn-wrapper">
+          <InfoButton
+            onClick={ handleInfoBtnClick }
+          />
+        </div>
 
         <div className="home-logo-btn">
 
@@ -23,7 +40,7 @@ const IndexPage = () => {
 
         </div>
 
-      </div>
+      </ContentContainer>
 
     </div>
   )

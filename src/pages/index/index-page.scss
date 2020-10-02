@@ -7,6 +7,11 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+  .info-btn-wrapper {
+    position: absolute;
+    right: 20px;
+    top: -20%;
+  }
   &-logo-btn {
     display: flex;
     flex-direction: column;
