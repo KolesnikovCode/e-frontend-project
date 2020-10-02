@@ -8,9 +8,10 @@
   justify-content: center;
   height: 100%;
   .info-btn-wrapper {
-    position: absolute;
-    right: 20px;
-    top: -20%;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    margin-right: 10px;
   }
   &-logo-btn {
     display: flex;
