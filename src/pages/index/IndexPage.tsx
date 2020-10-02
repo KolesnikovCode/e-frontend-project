@@ -1,4 +1,5 @@
 import React from 'react'
+import './index-page.scss'
 import BigLogo from '../../assets/images/big-logo.svg'
 import { useTitlePage } from '../../hooks'
 

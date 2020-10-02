@@ -1,4 +1,5 @@
 import React from 'react'
+import './small-screen-alert.scss'
 
 const SmallScreenAlert = () => {
   return (

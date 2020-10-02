@@ -1,11 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import SmallLogo from '../../assets/images/small-logo.svg'
+import SmallLogo from '../../../assets/images/small-logo.svg'
+import BigContainer from '../../../layouts/big-container/BigContainer'
+import './header.scss'
 
 const Header = () => {
   return (
     <header className="header">
-      <div className="big-container">
+      <BigContainer>
+
         <div className="header-content">
 
           <div className="header-logo">
@@ -20,7 +23,8 @@ const Header = () => {
           </nav>
 
         </div>
-      </div>
+        
+      </BigContainer>
     </header>
   )
 }

@@ -6,9 +6,10 @@ import { Provider } from "react-redux"
 import { createStore } from "redux"
 import reducer from "./redux/reducer"
 import IndexPage from "./pages/index/IndexPage"
-import Header from "./components/core/Header"
-import Footer from "./components/core/Footer"
-import SmallScreenAlert from './components/core/SmallScreenAlert'
+import Header from "./components/core/header/Header"
+import Footer from "./components/core/footer/Footer"
+import SmallScreenAlert from './components/core/small-screen-alert/SmallScreenAlert'
+import PageContent from "./layouts/page-content/PageContent"
 
 const store = createStore(reducer)
 
@@ -21,13 +22,13 @@ const app = () => {
 
       <Header />
 
-      <div className="page-content">
+      <PageContent>
         <Switch>
 
           <Route path="/" exact component={ IndexPage } />
 
         </Switch>
-      </div>
+      </PageContent>
 
       <Footer />
 

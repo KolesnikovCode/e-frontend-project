@@ -1,9 +1,10 @@
 import React from 'react'
-import { IconsEnum } from '../../models/icons'
-import InstagramIcon from '../../assets/images/social/instagram.svg'
-import YoutubeIcon from '../../assets/images/social/youtube.svg'
-import VkIcon from '../../assets/images/social/vk.svg'
-import FacebookIcon from '../../assets/images/social/facebook.svg'
+import './social-link.scss'
+import { IconsEnum } from '../../../models/icons'
+import InstagramIcon from '../../../assets/images/social/instagram.svg'
+import YoutubeIcon from '../../../assets/images/social/youtube.svg'
+import VkIcon from '../../../assets/images/social/vk.svg'
+import FacebookIcon from '../../../assets/images/social/facebook.svg'
 
 interface IProps {
   link: string

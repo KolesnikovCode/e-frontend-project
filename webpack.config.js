@@ -18,5 +18,8 @@ module.exports = {
       },
     ],
   },
+  alias: {
+    '@': path.join(__dirname, './src/')
+  }
   //...
 };

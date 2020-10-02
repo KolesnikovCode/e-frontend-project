@@ -1,0 +1,15 @@
+.social__link {
+  width: 47px;
+  height: 47px;
+  background: #ffffff40;
+  transition: all .2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 50%;
+  text-decoration: none;
+  &:hover {
+    background: #ffffff60;
+  }
+}
