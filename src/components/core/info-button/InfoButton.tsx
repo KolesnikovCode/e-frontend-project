@@ -8,7 +8,10 @@ interface IProps {
 
 const InfoButton = ({ onClick }: IProps) => {
   return (
-    <button className="info-button">
+    <button
+      className="info-button"
+      onClick={ onClick }  
+    >
       <img src={ InfoIcon } alt=""/>
     </button>
   )

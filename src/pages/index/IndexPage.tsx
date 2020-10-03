@@ -20,13 +20,13 @@ const IndexPage = () => {
   return (
     <div className="home animate__animated animate__fadeIn">
       
-      <ContentContainer>
+      <div className="info-btn-wrapper">
+        <InfoButton
+          onClick={ handleInfoBtnClick }
+        />
+      </div>
 
-        <div className="info-btn-wrapper">
-          <InfoButton
-            onClick={ handleInfoBtnClick }
-          />
-        </div>
+      <ContentContainer>
 
         <div className="home-logo-btn">
 
