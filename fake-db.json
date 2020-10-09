@@ -8,5 +8,13 @@
       "id": 2,
       "title": "Product 2"
     }
-  ]
+  ],
+  "user": {
+    "id": 1,
+    "firstName": "Александр",
+    "lastName": "Лукашенко",
+    "nickname": "killer_26",
+    "image": "https://mixnews.lv/wp-content/uploads/2016/04/ts00ff51.JPG",
+    "looks": "1"
+  }
 }

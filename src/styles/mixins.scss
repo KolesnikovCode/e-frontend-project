@@ -6,6 +6,7 @@
   cursor: pointer;
   background: $main-btn-color;
   transition: all .2s ease-in-out;
+  outline: none !important;
   &:hover {
     opacity: .8;
   }

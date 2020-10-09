@@ -1,8 +1,38 @@
 import actionTypes from "./actionTypes"
-import { Action } from "./reducer"
+import { TAction } from '../models/action'
 
-export type ISetCounter = (count: number) => Action
-export const setCounter: ISetCounter = (count) => ({
-  type: actionTypes.SET_COUNTER,
-  data: count
-})
+export const setGender = (gender: string): TAction => {
+  return {
+    type: actionTypes.SET_GENDER,
+    payload: gender
+  }
+}
+
+export const setConstitution = (constitution: string): TAction => {
+  return {
+    type: actionTypes.SET_CONSTITUTION,
+    payload: constitution
+  }
+}
+
+export const setEvent = (event: string): TAction => {
+  return {
+    type: actionTypes.SET_EVENT,
+    payload: event
+  }
+}
+
+
+export const setTone = (tone: string): TAction => {
+  return {
+    type: actionTypes.SET_TONE,
+    payload: tone
+  }
+}
+
+export const setPriceCategory = (priceGroup: string): TAction => {
+  return {
+    type: actionTypes.SET_PRICE_CATEGORY,
+    payload: priceGroup
+  }
+}
