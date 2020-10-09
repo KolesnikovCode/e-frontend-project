@@ -22,6 +22,7 @@ const IndexPage = () => {
       
       <div className="info-btn-wrapper">
         <InfoButton
+          popoverText="easy изучит ваш уникальный стиль и подберёт идеально подходящие вещи"
           onClick={ handleInfoBtnClick }
         />
       </div>

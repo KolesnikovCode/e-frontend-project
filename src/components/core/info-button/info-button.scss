@@ -16,4 +16,31 @@
   &:active {
     opacity: .9;
   }
+  &-content {
+    color: #fff;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: center;
+    max-width: 440px;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: $standart-element-border-radius;
+    user-select: none;
+  }
+}
+
+.bp3-popover {
+  border-radius: $standart-element-border-radius;
+  &-content {
+    background: #97A5B6 !important;
+    border-radius: $standart-element-border-radius !important;
+  }
+  &_arrow {
+    border-radius: $standart-element-border-radius !important;
+  }
+  &-arrow-fill {
+    fill: #97A5B6 !important;
+    border-radius: $standart-element-border-radius !important;
+  }
 }

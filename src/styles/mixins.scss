@@ -2,7 +2,7 @@
 
 @mixin actionButtonMixin {
   backdrop-filter: blur(30px);
-  border-radius: 40px;
+  border-radius: $standart-element-border-radius;
   cursor: pointer;
   background: $main-btn-color;
   transition: all .2s ease-in-out;

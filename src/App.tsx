@@ -1,5 +1,6 @@
 import React from "react"
 import "./styles/index.scss"
+import '@blueprintjs/core/lib/css/blueprint.css'
 import 'animate.css'
 import { Switch, Route, withRouter } from "react-router-dom"
 import { Provider } from "react-redux"

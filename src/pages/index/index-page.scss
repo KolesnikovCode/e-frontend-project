@@ -10,10 +10,12 @@
   max-width: 1301px;
   margin: 0 auto;
   position: relative;
+  padding-top: 40px;
   .info-btn-wrapper {
     position: absolute;
     top: 25px;
-    right: 15px;
+    right: 62px;
+    z-index: 1;
   }
   &-logo-btn {
     display: flex;
