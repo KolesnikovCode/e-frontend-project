@@ -5,8 +5,8 @@ import {
   EEvent,
   ETone,
   EPrice
-} from '../models/filters'
-import { TAction } from '../models/action'
+} from '../core/models/filters'
+import { TAction } from '../core/models/action'
 
 const initialState = {
   user: null,

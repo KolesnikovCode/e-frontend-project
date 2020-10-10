@@ -1,6 +1,6 @@
 import React from 'react'
 import './index-page.scss'
-import { useTitlePage } from '../../hooks'
+import { useTitlePage } from '../../core/hooks'
 import IndexPageContent from './IndexPageContent'
 
 

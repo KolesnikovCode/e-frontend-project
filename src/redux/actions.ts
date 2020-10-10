@@ -1,5 +1,5 @@
 import actionTypes from "./actionTypes"
-import { TAction } from '../models/action'
+import { TAction } from '../core/models/action'
 
 export const setGender = (gender: string): TAction => {
   return {

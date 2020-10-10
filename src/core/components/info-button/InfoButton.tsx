@@ -4,7 +4,6 @@ import './info-button.scss'
 import { Popover, Position } from '@blueprintjs/core'
 
 interface IProps {
-  onClick: () => any
   popoverText: string
   popoverPosition?: Position
 }
@@ -18,7 +17,6 @@ const popoverContentRenderer = (popoverText: string) => {
 }
 
 const InfoButton = ({
-  onClick,
   popoverText,
   popoverPosition = Position.BOTTOM 
 }: IProps) => {
@@ -30,7 +28,6 @@ const InfoButton = ({
     >
       <button
         className="info-button"
-        onClick={ onClick }
         title="Информация"
         type="button"
       >
