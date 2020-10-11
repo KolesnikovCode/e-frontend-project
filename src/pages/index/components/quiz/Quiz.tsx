@@ -1,10 +1,15 @@
 import React from 'react'
-import GenderStep from './steps/GenderStep'
+import { useDispatch } from 'react-redux'
+import { decrementModalStep } from '../../../../redux/actions'
 import { useSelector } from 'react-redux'
 import './quiz.scss'
 import InfoButton from '../../../../core/components/info-button/InfoButton'
 import CircleButton from '../../../../core/components/circle-button/CircleButton'
 import { IconsEnum } from '../../../../core/models/icons'
+
+import GenderStep from './steps/GenderStep'
+import ConstitutionStep from './steps/ConstitutionStep'
+import EventStep from './steps/EventStep'
 
 interface IProps {
   onClose: () => void
@@ -12,13 +17,27 @@ interface IProps {
 
 const Quiz = ({ onClose }: IProps) => {
 
+  const dispatch = useDispatch()
+
   // Selector
   const modalStep = useSelector((state: any) => state.modalStep)
+  const filters = useSelector((state: any) => state.filters)
+
+  console.log(filters);
+  
 
   const allSteps = {
     gender: {
-      info: 'Выберите гендерную принадлежность',
+      info: 'выберите гендерную принадлежность',
       component: <GenderStep />
+    },
+    constitution: {
+      info: 'easy подберёт наиболее подходящий и выгодный комплект для выбранной категории',
+      component: <ConstitutionStep />
+    },
+    event: {
+      info: 'выберите для какого повода easy подберёт вам образ',
+      component: <EventStep />
     }
   }
   
@@ -26,6 +45,7 @@ const Quiz = ({ onClose }: IProps) => {
   const topButtonsRenderer = () => {
     const buttonsRenderer = () => {
       switch (modalStep) {
+        // GENDER
         case 0:
           return (
             <>
@@ -35,6 +55,32 @@ const Quiz = ({ onClose }: IProps) => {
               />
               <InfoButton
                 popoverText={ allSteps.gender.info }
+              />
+            </>
+          )
+        // CONSTITUTION
+        case 1:
+          return (
+            <>
+              <CircleButton
+                onClick={ handleClickPrevStepBtn }
+                iconName={ IconsEnum.arrow_back }
+              />
+              <InfoButton
+                popoverText={ allSteps.constitution.info }
+              />
+            </>
+          )
+        // EVENT
+        case 2:
+          return (
+            <>
+              <CircleButton
+                onClick={ handleClickPrevStepBtn }
+                iconName={ IconsEnum.arrow_back }
+              />
+              <InfoButton
+                popoverText={ allSteps.event.info }
               />
             </>
           )
@@ -53,8 +99,15 @@ const Quiz = ({ onClose }: IProps) => {
   // STEPS
   const stepRenderer = () => {
     switch (modalStep) {
+      // GENDER
       case 0:
         return allSteps.gender.component
+      // CONSTITUTION
+      case 1:
+        return allSteps.constitution.component
+      // EVENT
+      case 2:
+        return allSteps.event.component
         default:
           return undefined
     }
@@ -85,6 +138,11 @@ const Quiz = ({ onClose }: IProps) => {
       onClose()
     }
   }
+
+  const handleClickPrevStepBtn = () => {
+    dispatch(decrementModalStep())
+  }
+
   // Subscribe on ppress Escape btn
   React.useEffect(() => {
     document.addEventListener('keydown', handleEscPress)

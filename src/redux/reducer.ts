@@ -27,27 +27,42 @@ export default function(state = initialState, action: TAction) {
     case actionTypes.SET_GENDER:
       return {
         ...state,
-        gender: action.payload
+        filters: {
+          ...state.filters,
+          gender: action.payload
+        }
       }
     case actionTypes.SET_CONSTITUTION:
       return {
         ...state,
-        constitution: action.payload
+        filters: {
+          ...state.filters,
+          constitution: action.payload
+        }
       }
     case actionTypes.SET_EVENT:
       return {
         ...state,
-        event: action.payload
+        filters: {
+          ...state.filters,
+          event: action.payload
+        }
       }
     case actionTypes.SET_TONE:
       return {
         ...state,
-        tone: action.payload
+        filters: {
+          ...state.filters,
+          tone: action.payload
+        }
       }
     case actionTypes.SET_PRICE_CATEGORY:
       return {
         ...state,
-        priceCategory: action.payload
+        filters: {
+          ...state.filters,
+          priceCategory: action.payload
+        }
       }
     case actionTypes.INCREMENT_MODAL_STEP:
       return {

@@ -39,6 +39,15 @@
       color: #fff;
       font-weight: 500;
       font-size: 33px;
+      transition: all .2s ease-in-out;
+      opacity: 1;
+      padding: 20px;
+      &:hover {
+        opacity: .8;
+      }
+      &:active {
+        opacity: .9;
+      }
     }
   }
   &-progress {
