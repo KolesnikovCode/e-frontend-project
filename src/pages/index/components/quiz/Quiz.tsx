@@ -10,6 +10,8 @@ import { IconsEnum } from '../../../../core/models/icons'
 import GenderStep from './steps/GenderStep'
 import ConstitutionStep from './steps/ConstitutionStep'
 import EventStep from './steps/EventStep'
+import ToneStep from './steps/ToneStep'
+import PriceStep from './steps/PriceStep'
 
 interface IProps {
   onClose: () => void
@@ -38,6 +40,16 @@ const Quiz = ({ onClose }: IProps) => {
     event: {
       info: 'выберите для какого повода easy подберёт вам образ',
       component: <EventStep />
+    },
+    tone: {
+      info: 'выберите в какой цветовой гамме easy подберёт вещи',
+      component: <ToneStep />
+    },
+    price: {
+      info: `В категорию "эконом" входят неизвестные бренды молодых дизайнеров и не только. Ценовая категория: до 15 тысяч рублей за образ.
+      В категорию "стандарт" входят известные всем бренды. Ценовая категория: до 25 тысяч рублей.
+      В категорию "люкс" входят известные и дорогие марки и не только. Ценовая категория: без ограничения цены.`,
+      component: <PriceStep />
     }
   }
   
@@ -84,6 +96,32 @@ const Quiz = ({ onClose }: IProps) => {
               />
             </>
           )
+        // EVENT
+        case 3:
+          return (
+            <>
+              <CircleButton
+                onClick={ handleClickPrevStepBtn }
+                iconName={ IconsEnum.arrow_back }
+              />
+              <InfoButton
+                popoverText={ allSteps.tone.info }
+              />
+            </>
+          )
+        // PRICE
+        case 4:
+          return (
+            <>
+              <CircleButton
+                onClick={ handleClickPrevStepBtn }
+                iconName={ IconsEnum.arrow_back }
+              />
+              <InfoButton
+                popoverText={ allSteps.price.info }
+              />
+            </>
+          )
         default:
           return undefined;
       }
@@ -108,6 +146,12 @@ const Quiz = ({ onClose }: IProps) => {
       // EVENT
       case 2:
         return allSteps.event.component
+      // TONE
+      case 3:
+        return allSteps.tone.component
+      // PRICE
+      case 4:
+        return allSteps.price.component
         default:
           return undefined
     }
@@ -133,6 +177,7 @@ const Quiz = ({ onClose }: IProps) => {
     )
   }
 
+  // HANDLERS
   const handleEscPress = (e: KeyboardEvent) => {
     if (e.key === 'Escape') {
       onClose()
