@@ -2,13 +2,16 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { setPriceCategory } from '../../../../../redux/actions'
 import { EPrice } from '../../../../../core/models/filters'
+import { useHistory } from 'react-router-dom'
 
 const PriceStep = () => {
 
   const dispatch = useDispatch()
+  const routerHistory = useHistory()
 
   const handleChosePriceCategory = (priceCategory: string) => {
     dispatch(setPriceCategory(priceCategory))
+    routerHistory.push('/catalog')
   }
 
   return (

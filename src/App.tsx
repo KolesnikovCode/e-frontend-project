@@ -11,6 +11,7 @@ import Header from "./core/components/header/Header"
 import Footer from "./core/components/footer/Footer"
 import SmallScreenAlert from './core/components/small-screen-alert/SmallScreenAlert'
 import PageContent from "./core/layouts/page-content/PageContent"
+import CatalogPage from "./pages/catalog/CatalogPage"
 
 const store = createStore(reducer)
 
@@ -33,6 +34,7 @@ const app = ({ history }: any) => {
         <Switch>
 
           <Route path="/" exact component={ IndexPage } />
+          <Route path="/catalog" exact component={ CatalogPage } />
 
         </Switch>
       </PageContent>
