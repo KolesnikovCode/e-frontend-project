@@ -1,4 +1,4 @@
 export type TAction = {
   type: string
-  payload: any
+  payload?: any
 }

@@ -36,3 +36,15 @@ export const setPriceCategory = (priceGroup: string): TAction => {
     payload: priceGroup
   }
 }
+
+export const incrementModalStep = (): TAction => {
+  return {
+    type: actionTypes.INCREMENT_MODAL_STEP
+  }
+}
+
+export const decrementModalStep = (): TAction => {
+  return {
+    type: actionTypes.DECREMENT_MODAL_STEP
+  }
+}

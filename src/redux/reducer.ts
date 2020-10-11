@@ -49,6 +49,16 @@ export default function(state = initialState, action: TAction) {
         ...state,
         priceCategory: action.payload
       }
+    case actionTypes.INCREMENT_MODAL_STEP:
+      return {
+        ...state,
+        modalStep: state.modalStep + 1
+      }
+    case actionTypes.DECREMENT_MODAL_STEP:
+      return {
+        ...state,
+        modalStep: state.modalStep - 1
+      }
     default:
       return state
   }

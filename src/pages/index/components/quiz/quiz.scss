@@ -7,6 +7,14 @@
     height: 100%;
     position: relative;
   }
+  &-top-buttons {
+    position: absolute;
+    top: -15px;
+    padding: 0 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
   &-buttons {
     &-wrapper {
       display: flex;
@@ -44,7 +52,6 @@
       margin: -7px;
       .passed {
         background: #fff;
-        transition: all .2s ease-in-out;
       }
     }
     &-circle {
@@ -55,7 +62,7 @@
       cursor: default;
       background: rgba(0, 0, 0, 0.25);
       margin: 7px;
-      transition: all .2s ease-in-out;
+      transition: all .3s ease-in-out;
     }
   }
 }
