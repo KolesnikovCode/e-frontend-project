@@ -74,6 +74,12 @@ export default function(state = initialState, action: TAction) {
         ...state,
         modalStep: state.modalStep - 1
       }
+    case actionTypes.RESET_TO_DEFAULT_MODAL_STATE:
+      return {
+        ...state,
+        filters: initialState.filters,
+        modalStep: 0
+      }
     default:
       return state
   }

@@ -48,3 +48,9 @@ export const decrementModalStep = (): TAction => {
     type: actionTypes.DECREMENT_MODAL_STEP
   }
 }
+
+export const resetToDefaultModalState = (): TAction => {
+  return {
+    type: actionTypes.RESET_TO_DEFAULT_MODAL_STATE
+  }
+}

@@ -10,7 +10,7 @@ const IndexPage = () => {
   useTitlePage('E A S Y - меняться - легко')
 
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0)
     setIsLoaded(true)
   }, [])
 

@@ -34,15 +34,15 @@ const Quiz = ({ onClose }: IProps) => {
       component: <GenderStep />
     },
     constitution: {
-      info: 'easy подберёт наиболее подходящий и выгодный комплект для выбранной категории',
+      info: 'выберите телосложение',
       component: <ConstitutionStep />
     },
     event: {
-      info: 'выберите для какого повода easy подберёт вам образ',
+      info: 'выберите для какого повода подобрать образ',
       component: <EventStep />
     },
     tone: {
-      info: 'выберите в какой цветовой гамме easy подберёт вещи',
+      info: 'выберите в какой цветовой гамме подбрать вещи',
       component: <ToneStep />
     },
     price: {
