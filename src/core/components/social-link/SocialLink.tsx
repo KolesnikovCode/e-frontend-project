@@ -1,10 +1,10 @@
-import React from 'react'
-import './social-link.scss'
-import { IconsEnum } from '../../models/icons'
-import InstagramIcon from '../../../assets/images/social/instagram.svg'
-import YoutubeIcon from '../../../assets/images/social/youtube.svg'
-import VkIcon from '../../../assets/images/social/vk.svg'
-import FacebookIcon from '../../../assets/images/social/facebook.svg'
+import React from 'react';
+import './social-link.scss';
+import { IconsEnum } from '../../models/icons';
+import InstagramIcon from '../../../assets/images/social/instagram.svg';
+import YoutubeIcon from '../../../assets/images/social/youtube.svg';
+import VkIcon from '../../../assets/images/social/vk.svg';
+import FacebookIcon from '../../../assets/images/social/facebook.svg';
 
 interface IProps {
   link: string
@@ -28,9 +28,9 @@ const SocialLink = ({ link, icon } : IProps) => {
         return <img src={ FacebookIcon } alt={ IconsEnum.facebook } />
 
       default:
-        break
+        break;
     }
-  }
+  };
 
   return (
     <a
@@ -44,4 +44,4 @@ const SocialLink = ({ link, icon } : IProps) => {
   )
 }
 
-export default SocialLink
+export default SocialLink;

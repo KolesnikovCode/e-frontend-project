@@ -1,30 +1,30 @@
-import React from 'react'
-import { useDispatch } from 'react-redux'
-import ContentContainer from '../../core/layouts/content-container/ContentContainer'
-import InfoButton from '../../core/components/info-button/InfoButton'
-import BigLogo from '../../assets/images/big-logo.svg'
-import Quiz from './components/quiz/Quiz'
-import { resetToDefaultModalState } from '../../redux/actions'
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import ContentContainer from '../../core/layouts/content-container/ContentContainer';
+import InfoButton from '../../core/components/info-button/InfoButton';
+import BigLogo from '../../assets/images/big-logo.svg';
+import Quiz from './components/quiz/Quiz';
+import { resetToDefaultModalState } from '../../redux/actions';
 
 const IndexPageContent: React.FC = () => {
   // LocalState
-  const [isQuizView, setIsQuizView] = React.useState<boolean>(false)
+  const [isQuizView, setIsQuizView] = React.useState<boolean>(false);
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleStartButtonClick = () => {
-    setIsQuizView(true)
-  }
+    setIsQuizView(true);
+  };
 
   const handleCloseQuiz = () => {
-    setIsQuizView(false)
-    dispatch(resetToDefaultModalState())
-  }
+    setIsQuizView(false);
+    dispatch(resetToDefaultModalState());
+  };
 
   React.useEffect(() => {
     dispatch(resetToDefaultModalState())
     // eslint-disable-next-line
-  }, [])
+  }, []);
   
   return  (
     <div className="home animate__animated animate__fadeIn">
@@ -66,4 +66,4 @@ const IndexPageContent: React.FC = () => {
   )
 }
 
-export default IndexPageContent
+export default IndexPageContent;

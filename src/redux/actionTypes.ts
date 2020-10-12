@@ -1,4 +1,4 @@
-const actionTypes = {
+export default {
   SET_GENDER: 'SET_GENDER',
   SET_CONSTITUTION: 'SET_CONSTITUTION',
   SET_EVENT: 'SET_EVENT',
@@ -7,6 +7,4 @@ const actionTypes = {
   INCREMENT_MODAL_STEP: 'INCREMENT_MODAL_STEP',
   DECREMENT_MODAL_STEP: 'DECREMENT_MODAL_STEP',
   RESET_TO_DEFAULT_MODAL_STATE: 'RESET_TO_DEFAULT_MODAL_STATE'
-}
-
-export default actionTypes
+};

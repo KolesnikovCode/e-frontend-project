@@ -1,12 +1,12 @@
-import actionTypes from "./actionTypes"
+import actionTypes from "./actionTypes";
 import {
   EGenders,
   EConstitution,
   EEvent,
   ETone,
   EPrice
-} from '../core/models/filters'
-import { TAction } from '../core/models/action'
+} from '../core/models/filters';
+import { TAction } from '../core/models/action';
 
 const initialState = {
   user: null,
@@ -19,7 +19,7 @@ const initialState = {
   },
   products: [],
   modalStep: 0
-}
+};
 
 export default function(state = initialState, action: TAction) {
   switch (action.type) {
@@ -83,4 +83,4 @@ export default function(state = initialState, action: TAction) {
     default:
       return state
   }
-}
+};

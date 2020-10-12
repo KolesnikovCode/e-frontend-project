@@ -1,10 +1,10 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import SmallLogo from '../../../assets/images/small-logo.svg'
-import SocialLink from '../social-link/SocialLink'
-import { IconsEnum } from '../../models/icons'
-import './footer.scss'
-import BigContainer from '../../layouts/big-container/BigContainer'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import SmallLogo from '../../../assets/images/small-logo.svg';
+import SocialLink from '../social-link/SocialLink';
+import { IconsEnum } from '../../models/icons';
+import './footer.scss';
+import BigContainer from '../../layouts/big-container/BigContainer';
 
 const Footer = () => {
 
@@ -25,7 +25,7 @@ const Footer = () => {
       link: 'http://facebook.com/',
       icon: IconsEnum.facebook
     }
-  ]
+  ];
 
   return (
     <footer className="footer">
@@ -65,4 +65,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default Footer;

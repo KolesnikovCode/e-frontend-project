@@ -1,5 +1,5 @@
-import React from 'react'
-import './content-container.scss'
+import React from 'react';
+import './content-container.scss';
 
 const ContentContainer = ({ children }: any) => {
   return (
@@ -7,6 +7,6 @@ const ContentContainer = ({ children }: any) => {
       { children }
     </div>
   )
-}
+};
 
-export default ContentContainer
+export default ContentContainer;

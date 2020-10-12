@@ -1,5 +1,5 @@
-import React from 'react'
-import './big-container.scss'
+import React from 'react';
+import './big-container.scss';
 
 const BigContainer = ({ children }: any) => {
   return (
@@ -9,4 +9,4 @@ const BigContainer = ({ children }: any) => {
   )
 }
 
-export default BigContainer
+export default BigContainer;

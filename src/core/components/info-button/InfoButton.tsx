@@ -1,7 +1,7 @@
-import React from 'react'
-import InfoIcon from '../../../assets/images/info-icon.svg'
-import './info-button.scss'
-import { Popover, Position } from '@blueprintjs/core'
+import React from 'react';
+import InfoIcon from '../../../assets/images/info-icon.svg';
+import './info-button.scss';
+import { Popover, Position } from '@blueprintjs/core';
 
 interface IProps {
   popoverText: string
@@ -14,7 +14,7 @@ const popoverContentRenderer = (popoverText: string) => {
       { popoverText }
     </div>
   )
-}
+};
 
 const InfoButton = ({
   popoverText,
@@ -35,6 +35,6 @@ const InfoButton = ({
       </button>
     </Popover>
   )
-}
+};
 
-export default InfoButton
+export default InfoButton;

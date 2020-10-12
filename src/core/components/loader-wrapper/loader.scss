@@ -1,0 +1,57 @@
+.loader {
+  &-wrapper {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #B4BCD2 -4.52%, #516A87 100%) no-repeat;
+  }
+  &-body {
+    font-size: 50px;
+    color: #fff;
+    letter-spacing: 10px;
+    display: flex;
+    font-weight: 700;
+    text-transform: lowercase;
+    div {
+      &:nth-child(1) {
+        animation: zoom 1s ease-in-out infinite;
+      }
+      &:nth-child(2) {
+        animation: zoom 1.1s ease-in-out infinite;
+      }
+      &:nth-child(3) {
+        animation: zoom 1.2s ease-in-out infinite;
+      }
+      &:nth-child(4) {
+        animation: zoom 1.3s ease-in-out infinite;
+      }
+      &:nth-child(5) {
+        animation: zoom 1.4s ease-in-out infinite;
+      }
+      &:nth-child(6) {
+        animation: zoom 1.5s ease-in-out infinite;
+      }
+      &:nth-child(7) {
+        animation: zoom 1.6s ease-in-out infinite;
+      }
+    }
+  }
+}
+
+@keyframes zoom {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.1);
+  }
+  100% {
+    transform: translateY(0px) scale(.7);
+  }
+ }

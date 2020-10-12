@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import SmallLogo from '../../../assets/images/small-logo.svg'
-import BigContainer from '../../layouts/big-container/BigContainer'
-import './header.scss'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import SmallLogo from '../../../assets/images/small-logo.svg';
+import BigContainer from '../../layouts/big-container/BigContainer';
+import './header.scss';
 
 const Header = () => {
   return (
@@ -27,6 +27,6 @@ const Header = () => {
       </BigContainer>
     </header>
   )
-}
+};
 
-export default Header
+export default Header;

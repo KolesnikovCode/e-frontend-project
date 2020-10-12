@@ -1,5 +1,5 @@
-import React from 'react'
-import './small-screen-alert.scss'
+import React from 'react';
+import './small-screen-alert.scss';
 
 const SmallScreenAlert = () => {
   return (
@@ -10,6 +10,6 @@ const SmallScreenAlert = () => {
       </div>
     </div>
   )
-}
+};
 
-export default SmallScreenAlert
+export default SmallScreenAlert;

@@ -1,5 +1,5 @@
-import React from 'react'
-import './page-content.scss'
+import React from 'react';
+import './page-content.scss';
 
 const PageContent = ({ children }: any) => {
   return (
@@ -9,4 +9,4 @@ const PageContent = ({ children }: any) => {
   )
 }
 
-export default PageContent
+export default PageContent;

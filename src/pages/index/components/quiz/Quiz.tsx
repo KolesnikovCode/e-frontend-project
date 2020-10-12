@@ -23,10 +23,6 @@ const Quiz = ({ onClose }: IProps) => {
 
   // Selector
   const modalStep = useSelector((state: any) => state.modalStep)
-  const filters = useSelector((state: any) => state.filters)
-
-  console.log(filters);
-  
 
   const allSteps = {
     gender: {

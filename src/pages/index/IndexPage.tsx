@@ -1,22 +1,27 @@
-import React from 'react'
-import './index-page.scss'
-import { useTitlePage } from '../../core/hooks'
-import IndexPageContent from './IndexPageContent'
+import React from 'react';
+import './index-page.scss';
+import { useTitlePage } from '../../core/hooks';
+import IndexPageContent from './IndexPageContent';
+import LoaderWrapper from '../.././core/components/loader-wrapper/LoaderWrapper';
 
 
 const IndexPage = () => {
-  const [isLoaded, setIsLoaded] = React.useState<boolean>(false)
+  const [isLoaded, setIsLoaded] = React.useState<boolean>(false);
   // Change title
-  useTitlePage('E A S Y - меняться - легко')
+  useTitlePage('E A S Y - меняться - легко');
 
   React.useEffect(() => {
     window.scrollTo(0, 0)
-    setIsLoaded(true)
-  }, [])
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 4000);
+  }, []);
 
   return (
-    isLoaded ? <IndexPageContent /> : <div>Loader coming soon...</div>
+    <LoaderWrapper isLoaded={ isLoaded }>
+      <IndexPageContent />
+    </LoaderWrapper>
   )
 }
 
-export default IndexPage
+export default IndexPage;
