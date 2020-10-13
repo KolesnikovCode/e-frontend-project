@@ -1,3 +1,4 @@
+import { TUser } from '../core/models/user';
 import actionTypes from "./actionTypes";
 import { TAction } from '../core/models/action';
 
@@ -53,3 +54,10 @@ export const resetToDefaultModalState = (): TAction => {
     type: actionTypes.RESET_TO_DEFAULT_MODAL_STATE
   }
 };
+
+export const setUser = (user: TUser): TAction => {
+  return {
+    type: actionTypes.SET_USER,
+    payload: user
+  }
+}

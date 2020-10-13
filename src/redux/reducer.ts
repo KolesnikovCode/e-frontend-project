@@ -80,6 +80,14 @@ export default function(state = initialState, action: TAction) {
         filters: initialState.filters,
         modalStep: 0
       }
+    // USER
+    case actionTypes.SET_USER:
+      return {
+        ...state,
+        user: {
+          ...action.payload
+        }
+      }
     default:
       return state
   }
