@@ -2,11 +2,23 @@
   "products": [
     {
       "id": 1,
-      "title": "Product 1"
+      "title": "Product 1",
+      "price": "4499",
+      "gender": "male",
+      "constitution": "average",
+      "event": "party",
+      "tone": "light",
+      "priceCategory": "standart"
     },
     {
       "id": 2,
-      "title": "Product 2"
+      "title": "Product 2",
+      "price": "5850",
+      "gender": "female",
+      "constitution": "slim",
+      "event": "work",
+      "tone": "light",
+      "priceCategory": "standart"
     }
   ],
   "user": {

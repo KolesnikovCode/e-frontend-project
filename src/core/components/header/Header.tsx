@@ -12,7 +12,7 @@ const navRenderer = (user: TUser) => {
       <Link to="/feed">лента</Link>
       {
         !!user ? (
-          <Link to="/cabiner">
+          <Link to="/cabinet">
             <img
               src={ user.image }
               alt={ user.nickname }

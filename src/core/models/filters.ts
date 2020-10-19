@@ -31,3 +31,11 @@ export enum EPrice {
   LUXE = 'LUXE',
   ANY = 'ANY'
 }
+
+export type TFilters = {
+  gender: string;
+  constitution: string;
+  event: string;
+  tone: string;
+  priceCategory: string;
+}
