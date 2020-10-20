@@ -3,7 +3,6 @@ import "./styles/index.scss";
 import '@blueprintjs/core/lib/css/blueprint.css';
 import 'animate.css';
 import { Switch, Route, withRouter } from "react-router-dom";
-import IndexPage from "./pages/index/IndexPage";
 import Header from "./core/components/header/Header";
 import Footer from "./core/components/footer/Footer";
 import SmallScreenAlert from './core/components/small-screen-alert/SmallScreenAlert';
@@ -13,7 +12,11 @@ import { setUser } from './redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
 
 import PageContent from "./core/layouts/page-content/PageContent";
+
+// PAGES
+import IndexPage from "./pages/index/IndexPage";
 import CatalogPage from "./pages/catalog/CatalogPage";
+import ResultPage from "./pages/result/ResultPage";
 
 const App = ({ history }: any) => {
 
@@ -62,6 +65,7 @@ const App = ({ history }: any) => {
         <PageContent>
           <Switch>
             <Route path="/" exact component={ IndexPage } />
+            <Route path="/result" exact component={ ResultPage } />
             <Route path="/catalog" exact component={ CatalogPage } />
           </Switch>
         </PageContent>

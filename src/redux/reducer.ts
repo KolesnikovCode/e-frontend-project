@@ -18,7 +18,8 @@ const initialState = {
     priceCategory: EPrice.ANY
   },
   products: [],
-  modalStep: 0
+  modalStep: 0,
+  isQuizFinished: false
 };
 
 export default function(state = initialState, action: TAction) {
@@ -79,6 +80,11 @@ export default function(state = initialState, action: TAction) {
         ...state,
         filters: initialState.filters,
         modalStep: 0
+      }
+    case actionTypes.SET_QUIZ_FINISHED:
+      return {
+        ...state,
+        isQuizFinished: action.payload
       }
     // USER
     case actionTypes.SET_USER:

@@ -10,7 +10,7 @@ export const filterProducts = (products: any, filters: TFilters) => {
         successFilter = true;
       } else {
         const productParameter = product[key].toUpperCase();
-        if (productParameter === filterValue) {
+        if (productParameter === filterValue || productParameter === "ANY") {
           successFilter = true;
         } else {
           successFilter = false;

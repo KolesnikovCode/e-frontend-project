@@ -61,3 +61,10 @@ export const setUser = (user: TUser): TAction => {
     payload: user
   }
 }
+
+export const setQuizFinished = (value: boolean): TAction => {
+  return {
+    type: actionTypes.SET_QUIZ_FINISHED,
+    payload: value
+  }
+}

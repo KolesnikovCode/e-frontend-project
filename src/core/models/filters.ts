@@ -4,6 +4,12 @@ export enum EGenders {
   ANY = "ANY"
 }
 
+export enum ECategory {
+  PANTS = 'PANTS',
+  JACKET = 'JACKET',
+  T_SHIRT = 'T_SHIRT'
+}
+
 export enum EConstitution {
   SLIM = 'SLIM',
   AVERAGE = 'AVERAGE',
@@ -27,7 +33,7 @@ export enum ETone {
 
 export enum EPrice {
   ECONOM = 'ECONOM',
-  STANDART = 'STANDART',
+  STANDARD = 'STANDARD',
   LUXE = 'LUXE',
   ANY = 'ANY'
 }
