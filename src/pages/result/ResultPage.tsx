@@ -44,7 +44,7 @@ const ResultPage = () => {
     if (isQuizFinished) {
       fetchData();
     } else {
-      routerHistory.push('/')
+      routerHistory.push('/');
     }
     return () => {
       dispatch(setQuizFinished(false));
