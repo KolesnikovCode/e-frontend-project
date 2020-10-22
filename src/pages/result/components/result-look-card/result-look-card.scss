@@ -1,0 +1,89 @@
+@import '../../../../styles/mixins.scss';
+
+.result-look {
+  @include whiteCard;
+  width: 100%;
+  padding: 25px 25px 22px 25px;
+  display: flex;
+  flex-direction: column;
+  transition: all .2s ease;
+  &:hover {
+    transform: scale(1.005);
+  }
+  &-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    user-select: none;
+    &-main {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      &__top {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      &__bottom {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      &__shoes {
+        display: flex;
+        justify-content: center;
+        img {
+          width: 35%;
+        }
+      }
+      &__accessory {
+        position: absolute;
+        width: 60%;
+        left: 80%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    &-additional {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      &__accessory {
+        width: 50%;
+        img {
+          width: 100%;
+        }
+      }
+      &__shirt {
+        display: flex;
+        justify-content: center;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    &-price {
+      font-weight: 700;
+      font-size: 20px;
+    }
+  }
+}

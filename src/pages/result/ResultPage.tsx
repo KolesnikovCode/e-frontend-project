@@ -7,7 +7,7 @@ import ResultPageContent from './ResultPageContent';
 import ProductsAPI from '../../core/api/products';
 import { filterProducts } from '../../core/api/utils';
 import { setQuizFinished } from '../../redux/actions';
-import { useHistory } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom';
 
 const ResultPage = () => {
   // Local state
@@ -15,7 +15,7 @@ const ResultPage = () => {
 
   // COMMON
   const dispatch = useDispatch();
-  const routerHistory = useHistory()
+  // const routerHistory = useHistory();
 
   // STORE
   const filters = useSelector((state: any) => state.filters);
@@ -44,7 +44,8 @@ const ResultPage = () => {
     if (isQuizFinished) {
       fetchData();
     } else {
-      routerHistory.push('/');
+      // routerHistory.push('/');
+      fetchData();
     }
     return () => {
       dispatch(setQuizFinished(false));

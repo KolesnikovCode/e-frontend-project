@@ -62,13 +62,17 @@ const App = ({ history }: any) => {
 
         <Header />
 
-        <PageContent>
-          <Switch>
-            <Route path="/" exact component={ IndexPage } />
+        <Switch>
+          {
+            // TODO: specific wrapper height
+          }
+          <Route path="/" exact component={ IndexPage } />
+          
+          <PageContent>
             <Route path="/result" exact component={ ResultPage } />
             <Route path="/catalog" exact component={ CatalogPage } />
-          </Switch>
-        </PageContent>
+          </PageContent>
+        </Switch>
 
         <Footer />
 

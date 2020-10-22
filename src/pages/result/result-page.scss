@@ -1,0 +1,10 @@
+.result {
+  padding: 25px 0;
+  &-grid {
+    padding: 0 80px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 57px;
+  }
+}

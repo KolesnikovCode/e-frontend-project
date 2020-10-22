@@ -28,3 +28,8 @@
     opacity: .9;
   }
 }
+
+@mixin whiteCard {
+  background: #fff;
+  border-radius: 45px;
+}

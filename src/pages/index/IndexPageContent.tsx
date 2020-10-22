@@ -27,8 +27,8 @@ const IndexPageContent: React.FC = () => {
   }, []);
   
   return  (
-    <div className="home animate__animated animate__fadeIn">
-      
+    <div className="index-page-content">
+      <div className="home animate__animated animate__fadeIn">
         {
           !isQuizView ? (
             <>
@@ -62,6 +62,7 @@ const IndexPageContent: React.FC = () => {
             />
           )
         }
+      </div>
     </div>
   )
 }
