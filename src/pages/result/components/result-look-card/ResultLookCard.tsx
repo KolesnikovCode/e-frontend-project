@@ -1,11 +1,15 @@
 import React from 'react';
 import './result-look-card.scss';
+import FavoriteIcon from '../../../../assets/images/buttons/favorite.svg';
+import LikeIcon from '../../../../assets/images/buttons/like.svg';
+import ArrowRightIcon from '../../../../assets/images/buttons/arrow-right.svg';
 
 const ResultLookCard: React.FC = () => {
   return (
     <div className="result-look">
 
       <div className="result-look-content">
+
         <div className="result-look-content-main">
 
           <div className="result-look-content-main__top">
@@ -40,14 +44,29 @@ const ResultLookCard: React.FC = () => {
       </div>
 
       <div className="result-look-bottom">
+
         <div className="result-look-bottom-price">
           123456₽
         </div>
+
         <div className="result-look-bottom-actions">
-          <div className="result-look-bottom-actions__favorite"></div>
-          <div className="result-look-bottom-actions__like"></div>
-          <div className="result-look-bottom-actions__link"></div>
+          <div className="result-look-bottom-actions__favorite">
+            <button>
+              <img src={ FavoriteIcon } alt="favorite"/>
+            </button>
+          </div>
+          <div className="result-look-bottom-actions__like">
+            <button>
+              <img src={ LikeIcon } alt=""/>
+            </button>
+          </div>
+          <div className="result-look-bottom-actions__link">
+            <button title="Перейти к образу">
+              <img src={ ArrowRightIcon } alt=""/>
+            </button>
+          </div>
         </div>
+
       </div>
 
     </div>
