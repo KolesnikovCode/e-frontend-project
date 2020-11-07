@@ -34,9 +34,9 @@
         display: flex;
         justify-content: center;
         img {
-          width: 90%;
+          width: 80%;
           box-sizing: border-box;
-          padding-right: 30%;
+          transform: translateX(-20%);
         }
       }
       &__accessory {

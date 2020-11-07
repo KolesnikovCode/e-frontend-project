@@ -6,6 +6,7 @@ import { ReactComponent as LikeIcon } from '../../../../assets/images/buttons/li
 import { ReactComponent as ArrowRightIcon } from '../../../../assets/images/buttons/arrow-right.svg';
 import { TLook } from '../../../../core/models/look';
 
+
 interface IResultLookCardProps {
   look: TLook
 }
@@ -23,6 +24,7 @@ const ResultLookCard = ({ look }: IResultLookCardProps) => {
 
           <div className="result-look-content-main__bottom">
             <img draggable="false" src={look.mainProducts.bottomProduct.image} alt=""/>
+            <img draggable="false" src="" alt=""/>
           </div>
 
           <div className="result-look-content-main__shoes">

@@ -9,7 +9,7 @@
       "tone": "DARK",
       "priceCategory": "STANDARD",
       "brand": "BALENCIAGA 2020",
-      "image": "https://lh4.googleusercontent.com/mLKZcVx2bJvOIHX4_lgp_mgp5OiTuJCpnJBFQb5BiYX47yfTLPL3Jpvwae5_fJ7wqiJ2apycJO_5a0pORo24=w1718-h893",
+      "image": "https://raw.githubusercontent.com/KolesnikovCode/easy-images/main/bottom1.png",
       "title": "BALENCIAGA",
       "description": "Черные леггинсы из осенне-зимней коллекции 2020 года станут смелой альтернативой привычным джинсам в повседневном образе со свитером, ботинками и пальто. Для производства модели мастера марки, основанной Кристобалем Баленсиагой, использовали мягкий текстиль с шелковистым блеском. За счет добавления эластичных волокон изделие хорошо тянется и идеально облегает фигуру.",
       "price": "24 000"
@@ -23,7 +23,7 @@
       "tone": "DARK",
       "priceCategory": "LUXE",
       "brand": "LORO PIANA",
-		  "image": "https://lh3.google.com/u/0/d/1SQ3f4z_OBYB-O2jdAf5FdW8m4F9bwNud=w1718-h950-iv1",
+		  "image": "https://raw.githubusercontent.com/KolesnikovCode/easy-images/main/top1.png",
       "title": "Кашемировая куртка",
       "description": "Утепленная темно-синяя куртка из классической коллекции бренда, основанного Пьетро Лоро Пьяна, идеально подойдет для прогулок в непогоду. Все дело в обработанном по технологии Storm System непромокаемом и непродуваемом кашемире, созданном из пуха горных коз редкой породы Hircus. А отделанный густым мехом песца съемный капюшон и высокий воротник-стойка надежно защитят голову и шею от ветра.",
       "price": "531 000"
@@ -51,7 +51,7 @@
       "tone": "LIGHT",
       "priceCategory": "LUXE",
       "brand": "ALEXANDER MCQUEEN",
-      "image": "https://lh6.googleusercontent.com/ABjcZdmLs7WwBdJx7VFKOCo60lU_pEC3ScWjqZ7fdYYWG6Z0V3iRo3eRT1Tcxu2NxccGNHyw8JJMo3M7AODJ=w1718-h893",
+      "image": "https://raw.githubusercontent.com/KolesnikovCode/easy-images/main/shoes1.png",
       "title": "Комбинированные кроссовки",
       "description": "Белые кроссовки из мягкой матовой кожи достаточно нейтральны, чтобы дополнить яркий образ, но не лишены индивидуальности за счет массивной подошвы и вставок из текстиля с мерцающим блеском. Обувь вошла в весенне-летнюю коллекцию марки, основанной Александром Маккуином.",
       "price": "43 300"
@@ -65,7 +65,7 @@
       "tone": "DARK",
       "priceCategory": "LUXE",
       "brand": "ALEXANDER MCQUEEN",
-      "image": "https://lh4.googleusercontent.com/cSh_MUBe0lX7ydcV_zWW-GL5QIhknp2eGNSi8p6UbvC19AtwWl-OJ3EBjFLITBfU82BdqE0BxUJCg-5PMawd=w1718-h893",
+      "image": "https://raw.githubusercontent.com/KolesnikovCode/easy-images/main/bug1.png",
       "title": "Рюкзак",
       "description": "Черный рюкзак",
       "price": "41 300"
@@ -99,7 +99,7 @@
           "tone": "DARK",
           "priceCategory": "LUXE",
           "brand": "LORO PIANA",
-          "image": "https://lh3.google.com/u/0/d/1SQ3f4z_OBYB-O2jdAf5FdW8m4F9bwNud=w1718-h950-iv1",
+          "image": "https://raw.githubusercontent.com/KolesnikovCode/easy-images/main/top1.png",
           "title": "Кашемировая куртка",
           "description": "Утепленная темно-синяя куртка из классической коллекции бренда, основанного Пьетро Лоро Пьяна, идеально подойдет для прогулок в непогоду. Все дело в обработанном по технологии Storm System непромокаемом и непродуваемом кашемире, созданном из пуха горных коз редкой породы Hircus. А отделанный густым мехом песца съемный капюшон и высокий воротник-стойка надежно защитят голову и шею от ветра.",
           "price": "531 000"
@@ -113,7 +113,7 @@
           "tone": "DARK",
           "priceCategory": "STANDARD",
           "brand": "BALENCIAGA 2020",
-          "image": "https://lh4.googleusercontent.com/mLKZcVx2bJvOIHX4_lgp_mgp5OiTuJCpnJBFQb5BiYX47yfTLPL3Jpvwae5_fJ7wqiJ2apycJO_5a0pORo24=w1718-h893",
+          "image": "https://raw.githubusercontent.com/KolesnikovCode/easy-images/main/bottom1.png",
           "title": "BALENCIAGA",
           "description": "Черные леггинсы из осенне-зимней коллекции 2020 года станут смелой альтернативой привычным джинсам в повседневном образе со свитером, ботинками и пальто. Для производства модели мастера марки, основанной Кристобалем Баленсиагой, использовали мягкий текстиль с шелковистым блеском. За счет добавления эластичных волокон изделие хорошо тянется и идеально облегает фигуру.",
           "price": "24 000"
@@ -127,7 +127,7 @@
           "tone": "LIGHT",
           "priceCategory": "LUXE",
           "brand": "ALEXANDER MCQUEEN",
-          "image": "https://lh6.googleusercontent.com/ABjcZdmLs7WwBdJx7VFKOCo60lU_pEC3ScWjqZ7fdYYWG6Z0V3iRo3eRT1Tcxu2NxccGNHyw8JJMo3M7AODJ=w1718-h893",
+          "image": "https://raw.githubusercontent.com/KolesnikovCode/easy-images/main/shoes1.png",
           "title": "Комбинированные кроссовки",
           "description": "Белые кроссовки из мягкой матовой кожи достаточно нейтральны, чтобы дополнить яркий образ, но не лишены индивидуальности за счет массивной подошвы и вставок из текстиля с мерцающим блеском. Обувь вошла в весенне-летнюю коллекцию марки, основанной Александром Маккуином.",
           "price": "43 300"
@@ -156,7 +156,7 @@
           "tone": "DARK",
           "priceCategory": "LUXE",
           "brand": "LORO PIANA",
-          "image": "https://lh3.google.com/u/0/d/1SQ3f4z_OBYB-O2jdAf5FdW8m4F9bwNud=w1718-h950-iv1",
+          "image": "https://raw.githubusercontent.com/KolesnikovCode/easy-images/main/top1.png",
           "title": "Кашемировая куртка",
           "description": "Утепленная темно-синяя куртка из классической коллекции бренда, основанного Пьетро Лоро Пьяна, идеально подойдет для прогулок в непогоду. Все дело в обработанном по технологии Storm System непромокаемом и непродуваемом кашемире, созданном из пуха горных коз редкой породы Hircus. А отделанный густым мехом песца съемный капюшон и высокий воротник-стойка надежно защитят голову и шею от ветра.",
           "price": "531 000"
@@ -170,7 +170,7 @@
           "tone": "DARK",
           "priceCategory": "STANDARD",
           "brand": "BALENCIAGA 2020",
-          "image": "https://lh4.googleusercontent.com/mLKZcVx2bJvOIHX4_lgp_mgp5OiTuJCpnJBFQb5BiYX47yfTLPL3Jpvwae5_fJ7wqiJ2apycJO_5a0pORo24=w1718-h893",
+          "image": "https://raw.githubusercontent.com/KolesnikovCode/easy-images/main/bottom1.png",
           "title": "BALENCIAGA",
           "description": "Черные леггинсы из осенне-зимней коллекции 2020 года станут смелой альтернативой привычным джинсам в повседневном образе со свитером, ботинками и пальто. Для производства модели мастера марки, основанной Кристобалем Баленсиагой, использовали мягкий текстиль с шелковистым блеском. За счет добавления эластичных волокон изделие хорошо тянется и идеально облегает фигуру.",
           "price": "24 000"
@@ -184,7 +184,7 @@
           "tone": "LIGHT",
           "priceCategory": "LUXE",
           "brand": "ALEXANDER MCQUEEN",
-          "image": "https://lh6.googleusercontent.com/ABjcZdmLs7WwBdJx7VFKOCo60lU_pEC3ScWjqZ7fdYYWG6Z0V3iRo3eRT1Tcxu2NxccGNHyw8JJMo3M7AODJ=w1718-h893",
+          "image": "https://raw.githubusercontent.com/KolesnikovCode/easy-images/main/shoes1.png",
           "title": "Комбинированные кроссовки",
           "description": "Белые кроссовки из мягкой матовой кожи достаточно нейтральны, чтобы дополнить яркий образ, но не лишены индивидуальности за счет массивной подошвы и вставок из текстиля с мерцающим блеском. Обувь вошла в весенне-летнюю коллекцию марки, основанной Александром Маккуином.",
           "price": "43 300"
@@ -213,7 +213,7 @@
           "tone": "DARK",
           "priceCategory": "LUXE",
           "brand": "LORO PIANA",
-          "image": "https://lh3.google.com/u/0/d/1SQ3f4z_OBYB-O2jdAf5FdW8m4F9bwNud=w1718-h950-iv1",
+          "image": "https://raw.githubusercontent.com/KolesnikovCode/easy-images/main/top1.png",
           "title": "Кашемировая куртка",
           "description": "Утепленная темно-синяя куртка из классической коллекции бренда, основанного Пьетро Лоро Пьяна, идеально подойдет для прогулок в непогоду. Все дело в обработанном по технологии Storm System непромокаемом и непродуваемом кашемире, созданном из пуха горных коз редкой породы Hircus. А отделанный густым мехом песца съемный капюшон и высокий воротник-стойка надежно защитят голову и шею от ветра.",
           "price": "531 000"
@@ -227,7 +227,7 @@
           "tone": "DARK",
           "priceCategory": "STANDARD",
           "brand": "BALENCIAGA 2020",
-          "image": "https://lh4.googleusercontent.com/mLKZcVx2bJvOIHX4_lgp_mgp5OiTuJCpnJBFQb5BiYX47yfTLPL3Jpvwae5_fJ7wqiJ2apycJO_5a0pORo24=w1718-h893",
+          "image": "https://raw.githubusercontent.com/KolesnikovCode/easy-images/main/bottom1.png",
           "title": "BALENCIAGA",
           "description": "Черные леггинсы из осенне-зимней коллекции 2020 года станут смелой альтернативой привычным джинсам в повседневном образе со свитером, ботинками и пальто. Для производства модели мастера марки, основанной Кристобалем Баленсиагой, использовали мягкий текстиль с шелковистым блеском. За счет добавления эластичных волокон изделие хорошо тянется и идеально облегает фигуру.",
           "price": "24 000"
@@ -241,7 +241,7 @@
           "tone": "LIGHT",
           "priceCategory": "LUXE",
           "brand": "ALEXANDER MCQUEEN",
-          "image": "https://lh6.googleusercontent.com/ABjcZdmLs7WwBdJx7VFKOCo60lU_pEC3ScWjqZ7fdYYWG6Z0V3iRo3eRT1Tcxu2NxccGNHyw8JJMo3M7AODJ=w1718-h893",
+          "image": "https://raw.githubusercontent.com/KolesnikovCode/easy-images/main/shoes1.png",
           "title": "Комбинированные кроссовки",
           "description": "Белые кроссовки из мягкой матовой кожи достаточно нейтральны, чтобы дополнить яркий образ, но не лишены индивидуальности за счет массивной подошвы и вставок из текстиля с мерцающим блеском. Обувь вошла в весенне-летнюю коллекцию марки, основанной Александром Маккуином.",
           "price": "43 300"
@@ -270,7 +270,7 @@
           "tone": "DARK",
           "priceCategory": "LUXE",
           "brand": "LORO PIANA",
-          "image": "https://lh3.google.com/u/0/d/1SQ3f4z_OBYB-O2jdAf5FdW8m4F9bwNud=w1718-h950-iv1",
+          "image": "https://raw.githubusercontent.com/KolesnikovCode/easy-images/main/top1.png",
           "title": "Кашемировая куртка",
           "description": "Утепленная темно-синяя куртка из классической коллекции бренда, основанного Пьетро Лоро Пьяна, идеально подойдет для прогулок в непогоду. Все дело в обработанном по технологии Storm System непромокаемом и непродуваемом кашемире, созданном из пуха горных коз редкой породы Hircus. А отделанный густым мехом песца съемный капюшон и высокий воротник-стойка надежно защитят голову и шею от ветра.",
           "price": "531 000"
@@ -284,7 +284,7 @@
           "tone": "DARK",
           "priceCategory": "STANDARD",
           "brand": "BALENCIAGA 2020",
-          "image": "https://lh4.googleusercontent.com/mLKZcVx2bJvOIHX4_lgp_mgp5OiTuJCpnJBFQb5BiYX47yfTLPL3Jpvwae5_fJ7wqiJ2apycJO_5a0pORo24=w1718-h893",
+          "image": "https://raw.githubusercontent.com/KolesnikovCode/easy-images/main/bottom1.png",
           "title": "BALENCIAGA",
           "description": "Черные леггинсы из осенне-зимней коллекции 2020 года станут смелой альтернативой привычным джинсам в повседневном образе со свитером, ботинками и пальто. Для производства модели мастера марки, основанной Кристобалем Баленсиагой, использовали мягкий текстиль с шелковистым блеском. За счет добавления эластичных волокон изделие хорошо тянется и идеально облегает фигуру.",
           "price": "24 000"
@@ -298,7 +298,7 @@
           "tone": "LIGHT",
           "priceCategory": "LUXE",
           "brand": "ALEXANDER MCQUEEN",
-          "image": "https://lh6.googleusercontent.com/ABjcZdmLs7WwBdJx7VFKOCo60lU_pEC3ScWjqZ7fdYYWG6Z0V3iRo3eRT1Tcxu2NxccGNHyw8JJMo3M7AODJ=w1718-h893",
+          "image": "https://raw.githubusercontent.com/KolesnikovCode/easy-images/main/shoes1.png",
           "title": "Комбинированные кроссовки",
           "description": "Белые кроссовки из мягкой матовой кожи достаточно нейтральны, чтобы дополнить яркий образ, но не лишены индивидуальности за счет массивной подошвы и вставок из текстиля с мерцающим блеском. Обувь вошла в весенне-летнюю коллекцию марки, основанной Александром Маккуином.",
           "price": "43 300"
@@ -327,7 +327,7 @@
           "tone": "DARK",
           "priceCategory": "LUXE",
           "brand": "LORO PIANA",
-          "image": "https://lh3.google.com/u/0/d/1SQ3f4z_OBYB-O2jdAf5FdW8m4F9bwNud=w1718-h950-iv1",
+          "image": "https://raw.githubusercontent.com/KolesnikovCode/easy-images/main/top1.png",
           "title": "Кашемировая куртка",
           "description": "Утепленная темно-синяя куртка из классической коллекции бренда, основанного Пьетро Лоро Пьяна, идеально подойдет для прогулок в непогоду. Все дело в обработанном по технологии Storm System непромокаемом и непродуваемом кашемире, созданном из пуха горных коз редкой породы Hircus. А отделанный густым мехом песца съемный капюшон и высокий воротник-стойка надежно защитят голову и шею от ветра.",
           "price": "531 000"
@@ -341,7 +341,7 @@
           "tone": "DARK",
           "priceCategory": "STANDARD",
           "brand": "BALENCIAGA 2020",
-          "image": "https://lh4.googleusercontent.com/mLKZcVx2bJvOIHX4_lgp_mgp5OiTuJCpnJBFQb5BiYX47yfTLPL3Jpvwae5_fJ7wqiJ2apycJO_5a0pORo24=w1718-h893",
+          "image": "https://raw.githubusercontent.com/KolesnikovCode/easy-images/main/bottom1.png",
           "title": "BALENCIAGA",
           "description": "Черные леггинсы из осенне-зимней коллекции 2020 года станут смелой альтернативой привычным джинсам в повседневном образе со свитером, ботинками и пальто. Для производства модели мастера марки, основанной Кристобалем Баленсиагой, использовали мягкий текстиль с шелковистым блеском. За счет добавления эластичных волокон изделие хорошо тянется и идеально облегает фигуру.",
           "price": "24 000"
@@ -355,7 +355,7 @@
           "tone": "LIGHT",
           "priceCategory": "LUXE",
           "brand": "ALEXANDER MCQUEEN",
-          "image": "https://lh6.googleusercontent.com/ABjcZdmLs7WwBdJx7VFKOCo60lU_pEC3ScWjqZ7fdYYWG6Z0V3iRo3eRT1Tcxu2NxccGNHyw8JJMo3M7AODJ=w1718-h893",
+          "image": "https://raw.githubusercontent.com/KolesnikovCode/easy-images/main/shoes1.png",
           "title": "Комбинированные кроссовки",
           "description": "Белые кроссовки из мягкой матовой кожи достаточно нейтральны, чтобы дополнить яркий образ, но не лишены индивидуальности за счет массивной подошвы и вставок из текстиля с мерцающим блеском. Обувь вошла в весенне-летнюю коллекцию марки, основанной Александром Маккуином.",
           "price": "43 300"
@@ -369,7 +369,7 @@
           "tone": "DARK",
           "priceCategory": "LUXE",
           "brand": "ALEXANDER MCQUEEN",
-          "image": "https://lh4.googleusercontent.com/cSh_MUBe0lX7ydcV_zWW-GL5QIhknp2eGNSi8p6UbvC19AtwWl-OJ3EBjFLITBfU82BdqE0BxUJCg-5PMawd=w1718-h893",
+          "image": "https://raw.githubusercontent.com/KolesnikovCode/easy-images/main/bug1.png",
           "title": "Рюкзак",
           "description": "Черный рюкзак",
           "price": "41 300"
