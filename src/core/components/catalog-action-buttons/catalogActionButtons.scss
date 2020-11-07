@@ -1,0 +1,13 @@
+.catalog-action-buttons {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: -15px;
+}
+
+.fixed {
+  margin-bottom: 30px;
+  transform: translateY(50px);
+}
