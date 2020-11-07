@@ -34,7 +34,9 @@
         display: flex;
         justify-content: center;
         img {
-          width: 35%;
+          width: 90%;
+          box-sizing: border-box;
+          padding-right: 30%;
         }
       }
       &__accessory {
@@ -107,7 +109,20 @@
       &__link {
         button {
           background: #62B4FF;
+          position: relative;
+          a {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-radius: 40px;
+          }
         }
+      }
+      .bookmarked {
+        background: #DB8638;
+      }
+      .liked {
+        background: #e41a1abf;
       }
     }
   }

@@ -3,13 +3,13 @@ import './result-page.scss';
 import ContentContainer from '../../core/layouts/content-container/ContentContainer';
 import ResultLookCard from './components/result-look-card/ResultLookCard';
 import CatalogActionButtons from '../../core/components/catalog-action-buttons/CatalogActionButtons';
+import { TLook } from '../../core/models/look';
 
 interface IProps {
-  looks: Array<any>
+  looks: Array<TLook>
 }
 
 const ResultPageContent = ({ looks }: IProps) => {
-  console.log('looks', looks);
   
   return (
     <div className="result">
@@ -17,8 +17,8 @@ const ResultPageContent = ({ looks }: IProps) => {
         <CatalogActionButtons />
         <div className="result-grid">
           {
-            [0,1,2,3,4,5,6,7,8].map(num => {
-              return <ResultLookCard key={num} />
+            looks.map(look => {
+              return <ResultLookCard look={ look } key={ look.id } />
             })
           }
         </div>

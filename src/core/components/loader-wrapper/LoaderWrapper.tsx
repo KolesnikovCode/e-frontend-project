@@ -1,7 +1,13 @@
 import React from 'react';
 import Loader from './Loader';
 
-const LoaderWrapper = ({ isLoaded, children }: any) => {
+interface IProps {
+  isLoaded: boolean;
+  hasError?: boolean;
+  children: React.ReactChildren
+}
+
+const LoaderWrapper = ({ isLoaded, children, hasError = false }: any) => {
   const [isHiddenLoader, setIsHiddenLoader] = React.useState(false);
   const loaderRef = React.useRef<HTMLElement | null>(null);
 
@@ -15,7 +21,8 @@ const LoaderWrapper = ({ isLoaded, children }: any) => {
   }, [isLoaded]);
   return (
     <>
-      { isLoaded && <>{ children }</> }
+      { isLoaded && !hasError && <>{ children }</> }
+      { isLoaded && hasError && <h1 style={{ textAlign: "center", color: "red" }}>Произошла ошибка при загрузке данных</h1> }
       { !isHiddenLoader && <Loader loaderRef={ loaderRef } /> }
     </>
   )

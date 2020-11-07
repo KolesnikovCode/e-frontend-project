@@ -5,13 +5,16 @@ import LoaderWrapper from '../../core/components/loader-wrapper/LoaderWrapper';
 import { useTitlePage } from '../../core/hooks';
 import ResultPageContent from './ResultPageContent';
 import ProductsAPI from '../../core/api/products';
+import LooksAPI from '../../core/api/looks';
 import { filterProducts } from '../../core/api/utils';
 import { setQuizFinished } from '../../redux/actions';
+import { TLook } from '../../core/models/look';
 // import { useHistory } from 'react-router-dom';
 
 const ResultPage = () => {
   // Local state
   const [isLoaded, setIsLoaded] = React.useState<boolean>(false);
+  const [looks, setLooks] = React.useState<Array<TLook>>([]);
 
   // COMMON
   const dispatch = useDispatch();
@@ -29,6 +32,10 @@ const ResultPage = () => {
       const productsResponse = await ProductsAPI.getProducts();
       const filteredProducts = filterProducts(productsResponse.data, filters);
       console.log('filteredProducts', filteredProducts);
+
+      const looksResponse = await LooksAPI.getLooks();
+      setLooks(looksResponse.data);
+      console.log('looksResponse', looksResponse);
 
       setIsLoaded(true);
     } catch(e) {
@@ -56,7 +63,7 @@ const ResultPage = () => {
   return (
     <LoaderWrapper isLoaded={isLoaded}>
       <ResultPageContent
-        looks={ [] }
+        looks={ looks }
       />
     </LoaderWrapper>
   )

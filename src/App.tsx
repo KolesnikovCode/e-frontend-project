@@ -17,6 +17,7 @@ import PageContent from "./core/layouts/page-content/PageContent";
 import IndexPage from "./pages/index/IndexPage";
 import CatalogPage from "./pages/catalog/CatalogPage";
 import ResultPage from "./pages/result/ResultPage";
+import LookPage from "./pages/look/LookPage";
 
 const App = ({ history }: any) => {
 
@@ -69,6 +70,7 @@ const App = ({ history }: any) => {
           <Route path="/" exact component={ IndexPage } />
           
           <PageContent>
+            <Route path="/look/:id" exact component={ LookPage } />
             <Route path="/result" exact component={ ResultPage } />
             <Route path="/catalog" exact component={ CatalogPage } />
           </PageContent>
