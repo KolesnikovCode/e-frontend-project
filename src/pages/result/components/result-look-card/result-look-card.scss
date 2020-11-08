@@ -33,8 +33,9 @@
       &__shoes {
         display: flex;
         justify-content: center;
+        width: 50%;
         img {
-          width: 80%;
+          width: 100%;
           box-sizing: border-box;
           transform: translateX(-20%);
         }

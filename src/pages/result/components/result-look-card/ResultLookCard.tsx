@@ -76,7 +76,7 @@ const ResultLookCard = ({ look }: IResultLookCardProps) => {
             </button>
           </div>
           <div className="result-look-bottom-actions__link">
-            <button title="Перейти к образу">
+            <button title={`Перейти к образу: ${ look.name }`}>
               <Link to={`/look/${look.id}`} />
               <ArrowRightIcon />
             </button>

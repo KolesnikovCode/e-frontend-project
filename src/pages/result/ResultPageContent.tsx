@@ -4,18 +4,24 @@ import ContentContainer from '../../core/layouts/content-container/ContentContai
 import ResultLookCard from './components/result-look-card/ResultLookCard';
 import CatalogActionButtons from '../../core/components/catalog-action-buttons/CatalogActionButtons';
 import { TLook } from '../../core/models/look';
+import routes from '../../core/routes';
 
 interface IProps {
   looks: Array<TLook>
 }
 
 const ResultPageContent = ({ looks }: IProps) => {
-  
+  const [isMinimizeGrid, setIsMinimizeGrid] = React.useState<boolean>(false);
+
   return (
     <div className="result">
       <ContentContainer>
-        <CatalogActionButtons />
-        <div className="result-grid">
+        <CatalogActionButtons
+          backButtonRoute={ routes.MAIN_PAGE }
+          isMinimizeGrid={ isMinimizeGrid }
+          onClickToggleGridButton={ () => setIsMinimizeGrid(!isMinimizeGrid) }
+        />
+        <div className={ isMinimizeGrid ? "result-grid minimize_result" : "result-grid" }>
           {
             looks.map(look => {
               return <ResultLookCard look={ look } key={ look.id } />
