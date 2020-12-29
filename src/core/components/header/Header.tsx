@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import SmallLogo from '../../../assets/images/small-logo.svg';
 import BigContainer from '../../layouts/big-container/BigContainer';
 import { TUser } from '../../models/user';
@@ -9,16 +9,19 @@ import './header.scss';
 const navRenderer = (user: TUser) => {
   return (
     <nav className="header-nav">
-      <Link to="/feed">лента</Link>
+      <NavLink to="/" exact>главная</NavLink>
+      <NavLink to="/catalog" exact>каталог</NavLink>
+      <NavLink to="/result" exact>тест</NavLink>
+      <NavLink to="/feed" exact>лента</NavLink>
       {
         !!user ? (
-          <Link to="/cabinet">
+          <NavLink to="/cabinet">
             <img
               src={ user.image }
               alt={ user.nickname }
             />
-          </Link>
-        ) : <Link to="/login">войти</Link>
+          </NavLink>
+        ) : <NavLink to="/login">войти</NavLink>
       }
     </nav>
   )
@@ -35,9 +38,9 @@ const Header = () => {
         <div className="header-content">
 
           <div className="header-logo">
-            <Link to="/">
+            <NavLink to="/">
               <img src={SmallLogo} alt="logo"/>
-            </Link>
+            </NavLink>
           </div>
 
           { navRenderer(user) }

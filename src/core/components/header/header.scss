@@ -29,9 +29,9 @@
     a {
       text-decoration: none;
       color: #fff;
-      margin-left: 22px;
+      margin-left: 18px;
       font-style: normal;
-      font-weight: bold;
+      font-weight: 600;
       font-size: 20px;
       line-height: 24px;
       img {
@@ -46,6 +46,12 @@
           opacity: .9;
         }
       }
+    }
+    .active {
+      transition: all .2s ease-in-out;
+      pointer-events: none;
+      transform: translateY(-2px);
+      opacity: .8;
     }
   }
 }

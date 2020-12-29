@@ -1,12 +1,6 @@
 import React from 'react';
 import Loader from './Loader';
 
-interface IProps {
-  isLoaded: boolean;
-  hasError?: boolean;
-  children: React.ReactChildren
-}
-
 const LoaderWrapper = ({ isLoaded, children, hasError = false }: any) => {
   const [isHiddenLoader, setIsHiddenLoader] = React.useState(false);
   const loaderRef = React.useRef<HTMLElement | null>(null);
