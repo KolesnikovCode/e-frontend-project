@@ -94,6 +94,13 @@ export default function(state = initialState, action: TAction) {
           ...action.payload
         }
       }
+
+    // PRODUCTS
+    case actionTypes.SET_PRODUCTS:
+      return {
+        ...state,
+        products: action.payload
+      }
     default:
       return state
   }

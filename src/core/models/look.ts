@@ -1,4 +1,3 @@
-import { fromJS } from "immutable";
 import { TProduct } from './product';
 
 export type TLook = {

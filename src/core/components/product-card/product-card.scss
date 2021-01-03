@@ -1,0 +1,135 @@
+@import '../../../styles/mixins.scss';
+
+.product-card {
+    @include whiteCard;
+    border-radius: 40px;
+    padding: 18px;
+    padding-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 500px;
+    &-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 195px;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    &-name {
+        padding-top: 18px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        width: 100%;
+        max-width: 150px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &-brand {
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 22px;
+        padding-top: 8px;
+        text-transform: capitalize;
+        width: 100%;
+        max-width: 150px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 18px;
+        &-price {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            width: 34%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &-actions {
+            display: flex;
+            align-items: center;
+            margin: -3px;
+            button {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                transition: all .2s ease-in-out;
+                cursor: pointer;
+                background: #BFBFBF;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 3px;
+                outline: none;
+                &:hover {
+                opacity: 0.8;
+                }
+                &:active {
+                opacity: 0.9;
+                }
+            }
+            &__link {
+                button {
+                background: #62B4FF;
+                position: relative;
+                a {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    border-radius: 40px;
+                }
+                }
+            }
+            .bookmarked {
+                background: #DB8638;
+            }
+            .liked {
+                background: #e41a1abf;
+            }
+        }
+    }
+}
+
+.big-card {
+    .product-card {
+        &-image {
+            height: 450px;
+        }
+        &-name {
+            font-size: 18px;
+            line-height: 21px;
+            max-width: 228px;
+        }
+        &-brand {
+            font-size: 28px;
+            line-height: 34px;
+            max-width: 228px;
+        }
+        &-bottom {
+            &-price {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            &-actions {
+                margin: -5px;
+                button {
+                    width: 30px;
+                    height: 30px;
+                    margin: 5px;
+                }
+            }
+        }
+    }
+}

@@ -73,6 +73,7 @@ const App = ({ history }: any) => {
             <Route path="/look/:id" exact component={ LookPage } />
             <Route path="/result" exact component={ ResultPage } />
             <Route path="/catalog" exact component={ CatalogPage } />
+            <Route path="/product/:id" exact component={ CatalogPage } />
           </PageContent>
         </Switch>
 

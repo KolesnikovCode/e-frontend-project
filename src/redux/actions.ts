@@ -1,6 +1,7 @@
 import { TUser } from '../core/models/user';
 import actionTypes from "./actionTypes";
 import { TAction } from '../core/models/action';
+import { TProduct } from '../core/models/product';
 
 export const setGender = (gender: string): TAction => {
   return {
@@ -66,5 +67,12 @@ export const setQuizFinished = (value: boolean): TAction => {
   return {
     type: actionTypes.SET_QUIZ_FINISHED,
     payload: value
+  }
+}
+
+export const setProducts = (products: Array<TProduct>): TAction => {
+  return {
+    type: actionTypes.SET_PRODUCTS,
+    payload: products
   }
 }

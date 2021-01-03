@@ -1,0 +1,13 @@
+.catalog {
+    &-grid {
+        padding: 0 80px;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 29px;
+    }
+}
+
+.minimize_grid {
+    grid-template-columns: 1fr 1fr 1fr;
+}

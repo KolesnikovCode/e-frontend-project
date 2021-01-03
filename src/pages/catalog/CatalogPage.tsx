@@ -1,25 +1,29 @@
 import React from 'react';
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import LoaderWrapper from '../../core/components/loader-wrapper/LoaderWrapper';
 import CatalogPageContent from './CatalogPageContent';
 import { useTitlePage } from '../../core/hooks'
 import ProductsAPI from '../../core/api/products';
-import { filterProducts } from '../../core/api/utils';
+import { setProducts } from '../../redux/actions';
 
 const CatalogPage = () => {
+  
+  // Redux
+  const dispatch = useDispatch();
+  const products = useSelector((state: any) => state.products);
+
   // Local state
   const [isLoaded, setIsLoaded] = React.useState<boolean>(false);
 
-  const filters = useSelector((state: any) => state.filters);
 
   const fetchData = async () => {
     try {
       setIsLoaded(false);
 
-      const productsResponse = await ProductsAPI.getProducts();
-      const filteredProducts = filterProducts(productsResponse.data, filters);
-
-      console.log('filteredProducts', filteredProducts);
+      const productsResponse = await ProductsAPI.getRealProducts();
+      console.log('productsResponse', productsResponse);
+      
+      dispatch(setProducts(productsResponse.data));
 
       setIsLoaded(true);
     } catch(e) {
@@ -37,7 +41,7 @@ const CatalogPage = () => {
 
   return (
     <LoaderWrapper isLoaded={isLoaded}>
-      <CatalogPageContent />
+      <CatalogPageContent products={ products } />
     </LoaderWrapper>
   )
 }
