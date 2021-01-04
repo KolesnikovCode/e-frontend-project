@@ -2,24 +2,24 @@ import React from 'react';
 import LoaderWrapper from '../../core/components/loader-wrapper/LoaderWrapper';
 import LookPageContent from './LookPageContent';
 import { useTitlePage } from '../../core/hooks'
-import LooksApi from '../../core/api/looks';
 import { useParams } from 'react-router-dom';
 import { TLook } from '../../core/models/look';
+import { mockLooks } from '../result/mock';
 
 const LookPage = () => {
   // Local state
   const [isLoaded, setIsLoaded] = React.useState<boolean>(false);
   const [loadingError, setLoadingError] = React.useState<boolean>(false);
-  const [look, setLook] = React.useState<TLook | null>(null);
+  const [look, setLook] = React.useState<TLook | any>(null);
 
-  const { id: lookId } = useParams();
+  const { id: lookId }: any = useParams();
 
   const fetchData = async () => {
     try {
       setIsLoaded(false);
       setLoadingError(false);
-      const lookResponse = await LooksApi.getOne(lookId);
-      setLook(lookResponse.data);
+      const foundLook = mockLooks.find(look => String(look.id) === lookId);
+      setLook(foundLook);
       
       setIsLoaded(true);
     } catch(e) {

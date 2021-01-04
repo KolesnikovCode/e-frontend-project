@@ -4,38 +4,31 @@ import { useSelector, useDispatch } from 'react-redux'
 import LoaderWrapper from '../../core/components/loader-wrapper/LoaderWrapper';
 import { useTitlePage } from '../../core/hooks';
 import ResultPageContent from './ResultPageContent';
-import ProductsAPI from '../../core/api/products';
-import LooksAPI from '../../core/api/looks';
-import { filterProducts } from '../../core/api/utils';
 import { setQuizFinished } from '../../redux/actions';
 import { TLook } from '../../core/models/look';
+import { mockLooks } from './mock';
 // import { useHistory } from 'react-router-dom';
 
 const ResultPage = () => {
   // Local state
   const [isLoaded, setIsLoaded] = React.useState<boolean>(false);
-  const [looks, setLooks] = React.useState<Array<TLook>>([]);
+  const [looks, setLooks] = React.useState<Array<TLook | any>>();
 
   // COMMON
   const dispatch = useDispatch();
   // const routerHistory = useHistory();
 
   // STORE
-  const filters = useSelector((state: any) => state.filters);
   const isQuizFinished = useSelector((state: any) => state.isQuizFinished);
 
   const fetchData = async () => {
     // TODO change products loading on looks loading
     try {
       setIsLoaded(false);
-
-      const productsResponse = await ProductsAPI.getProducts();
-      const filteredProducts = filterProducts(productsResponse.data, filters);
-      console.log('filteredProducts', filteredProducts);
-
-      const looksResponse = await LooksAPI.getLooks();
-      setLooks(looksResponse.data);
-      console.log('looksResponse', looksResponse);
+      await new Promise(res => {
+        setTimeout(() => res(true), 800)
+      })
+      setLooks(mockLooks);
 
       setIsLoaded(true);
     } catch(e) {

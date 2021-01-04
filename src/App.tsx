@@ -5,7 +5,6 @@ import 'animate.css';
 import { Switch, Route, withRouter } from "react-router-dom";
 import Header from "./core/components/header/Header";
 import Footer from "./core/components/footer/Footer";
-import SmallScreenAlert from './core/components/small-screen-alert/SmallScreenAlert';
 import LoaderWrapper from './core/components/loader-wrapper/LoaderWrapper';
 import { setUser } from './redux/actions';
 import { useDispatch } from 'react-redux';
@@ -94,8 +93,6 @@ const App = ({ history }: any) => {
         </Switch>
 
         <Footer />
-
-        <SmallScreenAlert />
 
       </>
     </LoaderWrapper>
