@@ -56,7 +56,7 @@ export const resetToDefaultModalState = (): TAction => {
   }
 };
 
-export const setUser = (user: TUser): TAction => {
+export const setUser = (user: TUser | any): TAction => {
   return {
     type: actionTypes.SET_USER,
     payload: user

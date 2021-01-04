@@ -6,7 +6,7 @@ import BigContainer from '../../layouts/big-container/BigContainer';
 import { TUser } from '../../models/user';
 import './header.scss';
 
-const navRenderer = (user: TUser) => {
+const navRenderer = (user: TUser | any) => {
   return (
     <nav className="header-nav">
       <NavLink to="/" exact>главная</NavLink>
@@ -15,13 +15,13 @@ const navRenderer = (user: TUser) => {
       <NavLink to="/feed" exact>лента</NavLink>
       {
         !!user ? (
-          <NavLink to="/cabinet">
+          <NavLink to="/cabinet" title={ user.displayName }>
             <img
-              src={ user.image }
+              src={ user.photoURL }
               alt={ user.nickname }
             />
           </NavLink>
-        ) : <NavLink to="/login">войти</NavLink>
+        ) : <NavLink to="/auth">войти</NavLink>
       }
     </nav>
   )

@@ -7,7 +7,7 @@ import { TLook } from '../../core/models/look';
 import routes from '../../core/routes';
 
 interface IProps {
-  looks: Array<TLook>
+  looks: Array<TLook> | any
 }
 
 const ResultPageContent = ({ looks }: IProps) => {
@@ -23,7 +23,7 @@ const ResultPageContent = ({ looks }: IProps) => {
         />
         <div className={ isMinimizeGrid ? "result-grid minimize_result" : "result-grid" }>
           {
-            looks.map(look => {
+            looks.map((look: any) => {
               return <ResultLookCard look={ look } key={ look.id } />
             })
           }

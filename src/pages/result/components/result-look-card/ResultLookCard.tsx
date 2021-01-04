@@ -8,7 +8,7 @@ import { TLook } from '../../../../core/models/look';
 
 
 interface IResultLookCardProps {
-  look: TLook
+  look: TLook | any
 }
 
 const ResultLookCard = ({ look }: IResultLookCardProps) => {
