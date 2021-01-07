@@ -5,9 +5,24 @@
         justify-content: center;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         gap: 29px;
+        @media screen and (max-width: 1250px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        @media screen and (max-width: 1040px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        @media screen and (max-width: 800px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media screen and (max-width: 500px) {
+            grid-template-columns: 1fr;
+        }
     }
 }
 
 .minimize_grid {
     grid-template-columns: 1fr 1fr 1fr;
+    @media screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+    }
 }

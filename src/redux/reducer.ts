@@ -19,7 +19,8 @@ const initialState = {
   },
   products: [],
   modalStep: 0,
-  isQuizFinished: false
+  isQuizFinished: false,
+  showItemsInCatalogCount: 30
 };
 
 export default function(state = initialState, action: TAction) {
@@ -85,6 +86,17 @@ export default function(state = initialState, action: TAction) {
       return {
         ...state,
         isQuizFinished: action.payload
+      }
+    // CATALOG
+    case actionTypes.INCREMENT_SHOW_ITEMS_IN_CATALOG:
+      return {
+        ...state,
+        showItemsInCatalogCount: state.showItemsInCatalogCount + 30
+      }
+    case actionTypes.RESET_SHOW_ITEMS_IN_CATALOG:
+      return {
+        ...state,
+        showItemsInCatalogCount: 30
       }
     // USER
     case actionTypes.SET_USER:

@@ -76,3 +76,15 @@ export const setProducts = (products: Array<TProduct>): TAction => {
     payload: products
   }
 }
+
+export const incrementShowItemsInCatalog = (): TAction => {
+  return {
+    type: actionTypes.INCREMENT_SHOW_ITEMS_IN_CATALOG
+  }
+}
+
+export const resetShowItemsInCatalog = (): TAction => {
+  return {
+    type: actionTypes.RESET_SHOW_ITEMS_IN_CATALOG
+  }
+}
