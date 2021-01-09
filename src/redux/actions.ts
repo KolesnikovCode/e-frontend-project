@@ -3,6 +3,13 @@ import actionTypes from "./actionTypes";
 import { TAction } from '../core/models/action';
 import { TProduct } from '../core/models/product';
 
+export const setCategory = (category: string): TAction => {
+  return {
+    type: actionTypes.SET_CATEGORY,
+    payload: category
+  }
+};
+
 export const setGender = (gender: string): TAction => {
   return {
     type: actionTypes.SET_GENDER,
@@ -53,6 +60,12 @@ export const decrementModalStep = (): TAction => {
 export const resetToDefaultModalState = (): TAction => {
   return {
     type: actionTypes.RESET_TO_DEFAULT_MODAL_STATE
+  }
+};
+
+export const resetToDefaultFilters = (): TAction => {
+  return {
+    type: actionTypes.RESET_TO_DEFAULT_FILTERS
   }
 };
 

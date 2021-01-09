@@ -4,6 +4,7 @@ import { IconsEnum } from '../../../core/models/icons';
 import { ReactComponent as ArrowBackIcon } from '../../../assets/images/buttons/arrow-back.svg';
 import { ReactComponent as MinimizeGridIcon } from '../../../assets/images/buttons/minimize-grid.svg';
 import { ReactComponent as MaximizeGridIcon } from '../../../assets/images/buttons/maximize-grid.svg';
+import { ReactComponent as FiltersIcon } from '../../../assets/images/buttons/filters.svg';
 
 
 interface IProps {
@@ -19,6 +20,8 @@ const iconRenderer = (icon: string) => {
       return <MinimizeGridIcon />
     case IconsEnum.maximize_grid:
       return <MaximizeGridIcon />
+    case IconsEnum.filters:
+      return <FiltersIcon />
     default:
       return undefined;
   }

@@ -11,4 +11,5 @@ export enum IconsEnum {
   maximize_grid = 'maximize_grid',
   cart = 'cart',
   like = 'like',
+  filters = 'filters'
 }

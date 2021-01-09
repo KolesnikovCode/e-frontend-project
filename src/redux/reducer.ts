@@ -4,13 +4,15 @@ import {
   EConstitution,
   EEvent,
   ETone,
-  EPrice
+  EPrice,
+  ECategory
 } from '../core/models/filters';
 import { TAction } from '../core/models/action';
 
 const initialState = {
   user: null,
   filters: {
+    category: ECategory.ANY,
     gender: EGenders.ANY,
     constitution: EConstitution.ANY,
     event: EEvent.ANY,
@@ -26,6 +28,14 @@ const initialState = {
 export default function(state = initialState, action: TAction) {
   switch (action.type) {
     // FILTERS
+    case actionTypes.SET_CATEGORY:
+      return {
+        ...state,
+        filters: {
+          ...state.filters,
+          category: action.payload
+        }
+      }
     case actionTypes.SET_GENDER:
       return {
         ...state,
@@ -81,6 +91,11 @@ export default function(state = initialState, action: TAction) {
         ...state,
         filters: initialState.filters,
         modalStep: 0
+      }
+    case actionTypes.RESET_TO_DEFAULT_FILTERS:
+      return {
+        ...state,
+        filters: initialState.filters,
       }
     case actionTypes.SET_QUIZ_FINISHED:
       return {

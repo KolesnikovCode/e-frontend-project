@@ -5,9 +5,49 @@ export enum EGenders {
 }
 
 export enum ECategory {
+  // ANY
+  ANY = 'ANY',
+  // Штаны
   PANTS = 'PANTS',
+
+  // Пиджак
   JACKET = 'JACKET',
-  T_SHIRT = 'T_SHIRT'
+
+  // Футболка
+  T_SHIRT = 'T_SHIRT',
+
+  // Рубашка
+  SHIRT = 'SHIRT',
+
+  // Джинсы
+  JEANS = 'JEANS',
+
+  // Пальто
+  COAT = 'COAT',
+
+  // Куртка
+  WARM_JACKET = 'WARM_JACKET',
+
+  // Свитер
+  SWEATER = 'SWEATER',
+
+  // Худи
+  HOODIE = 'HOODIE',
+
+  // Свитшот
+  SWEATSHOT = 'SWEATSHOT',
+
+  // Ботинки
+  BOOTS = 'BOOTS',
+
+  // Кроссовки
+  SNEAKERS = 'SNEAKERS',
+
+  // Аксессуар-верх
+  ACCESSORY_TOP = 'ACCESSORY_TOP',
+
+  // Аксессуар-низ
+  ACCESSORY_BOTTOM = 'ACCESSORY_BOTTOM',
 }
 
 export enum EConstitution {

@@ -8,20 +8,28 @@ interface IProps {
   backButtonRoute: string;
   onClickToggleGridButton: () => void;
   isMinimizeGrid: boolean;
+  isVisibleFiltersButton?: boolean;
+  onClickFiltersButton?: () => void
 }
 
-const CatalogActionButtons = ({ backButtonRoute, onClickToggleGridButton, isMinimizeGrid }: IProps) => {
+const CatalogActionButtons = ({ backButtonRoute, onClickToggleGridButton, isMinimizeGrid, isVisibleFiltersButton, onClickFiltersButton }: IProps) => {
   // common
   const routerHistory = useHistory();
 
   // Methods
   const handleClickToBackButton = () => {
     routerHistory.push(backButtonRoute);
-  }
+  };
 
   const handleClickToToggleGridButton = () => {
     onClickToggleGridButton();
-  }
+  };
+
+  const handleClickToFiltersButton = () => {
+    if (typeof onClickFiltersButton === 'function') {
+      onClickFiltersButton();
+    }
+  };
   
   // Fixed buttons position
   const [isFixedPosition, setIsFixedPosition] = React.useState<boolean>(false);
@@ -52,6 +60,14 @@ const CatalogActionButtons = ({ backButtonRoute, onClickToggleGridButton, isMini
           icon={ isMinimizeGrid ? IconsEnum.maximize_grid : IconsEnum.minimize_grid }
           onClick={ handleClickToToggleGridButton }
         />
+        {
+          isVisibleFiltersButton && (
+            <ActionButton
+              icon={ IconsEnum.filters }
+              onClick={ handleClickToFiltersButton }
+            />
+          )
+        }
       </div>
       <div className="catalog-action-buttons__right">
         Right btns

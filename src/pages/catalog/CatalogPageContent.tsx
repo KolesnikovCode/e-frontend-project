@@ -5,8 +5,9 @@ import ProductCard from '../../core/components/product-card/ProductCard';
 import ContentContainer from '../../core/layouts/content-container/ContentContainer';
 import { TProduct } from '../../core/models/product';
 import routes from '../../core/routes';
-import { incrementShowItemsInCatalog, resetShowItemsInCatalog } from '../../redux/actions';
+import { incrementShowItemsInCatalog, resetShowItemsInCatalog, resetToDefaultFilters } from '../../redux/actions';
 import './catalog-page.scss';
+import Filters from './components/filters/Filters';
 
 interface IProps {
   products: Array<TProduct>
@@ -15,17 +16,29 @@ interface IProps {
 const CatalogPageContent = ({ products }: IProps) => {
   // Local State
   const [isMinimizeGrid, setIsMinimizeGrid] = React.useState<boolean>(false);
+  const [isFiltersVisible, setIsFiltersVisible] = React.useState<boolean>(false);
 
   // Redux
   const dispatch = useDispatch();
   const showItemsInCatalogCount = useSelector((state: any) => state.showItemsInCatalogCount)
 
+  // Methods
   const incrementShowItemsCoutOnScroll = () => {
-    console.log((window.innerHeight + window.scrollY) >= document.body.offsetHeight);
-    if ((window.innerHeight + window.scrollY + 2) >= document.body.offsetHeight) {
-      dispatch((incrementShowItemsInCatalog()));
+    const footerHeight = document.querySelector('.footer')?.clientHeight;
+    if (footerHeight) {
+      if ((window.innerHeight + window.scrollY + footerHeight) >= document.body.offsetHeight) {
+        dispatch((incrementShowItemsInCatalog()));
+      }
     }
   };
+
+  const openFilters = () => {
+    setIsFiltersVisible(true);
+  }
+
+  const closeFilters = () => {
+    setIsFiltersVisible(false);
+  }
 
   React.useEffect(() => {
     window.addEventListener('scroll', incrementShowItemsCoutOnScroll);
@@ -33,6 +46,7 @@ const CatalogPageContent = ({ products }: IProps) => {
     return () => {
       window.removeEventListener('scroll', incrementShowItemsCoutOnScroll);
       dispatch(resetShowItemsInCatalog());
+      dispatch(resetToDefaultFilters())
     };
     // eslint-disable-next-line
   }, []);
@@ -41,10 +55,18 @@ const CatalogPageContent = ({ products }: IProps) => {
     <div className="catalog">
 
       <ContentContainer>
+
         <CatalogActionButtons
           backButtonRoute={ routes.MAIN_PAGE }
           onClickToggleGridButton={ () => setIsMinimizeGrid(!isMinimizeGrid) }
           isMinimizeGrid={ isMinimizeGrid }
+          isVisibleFiltersButton={ !isFiltersVisible }
+          onClickFiltersButton={ openFilters }
+        />
+
+        <Filters
+          isOpen={ isFiltersVisible }
+          onClose={ closeFilters }
         />
 
         <div className={ isMinimizeGrid ? "catalog-grid minimize_grid" : "catalog-grid" }>

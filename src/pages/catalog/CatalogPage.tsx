@@ -5,12 +5,13 @@ import CatalogPageContent from './CatalogPageContent';
 import { useTitlePage } from '../../core/hooks'
 import ProductsAPI from '../../core/api/products';
 import { setProducts } from '../../redux/actions';
+import { filterProducts } from '../../core/api/utils';
 
 const CatalogPage = () => {
   
   // Redux
   const dispatch = useDispatch();
-  const products = useSelector((state: any) => state.products);
+  const products = useSelector((state: any) => filterProducts(state.products, state.filters));
 
   // Local state
   const [isLoaded, setIsLoaded] = React.useState<boolean>(false);

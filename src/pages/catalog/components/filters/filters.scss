@@ -1,0 +1,40 @@
+.bp3-drawer {
+    background: none;
+    .bp3-heading {
+        color: #fff;
+    }
+}
+
+.filters {
+    color: #fff;
+    &-container {
+        display: flex;
+        flex-direction: column;
+    }
+    &-top {
+        border-radius: 40px;
+        background: rgba(0, 0, 0, 0.25);
+        padding: 17px;
+        margin: -10px;
+        font-weight: bold;
+        font-size: 18px;
+        &-item {
+            margin: 10px;
+            cursor: pointer;
+            width: fit-content;
+            padding: 8px 12px;
+            border-radius: 40px;
+            user-select: none;
+            transition: all .2s ease;
+            &:hover {
+                color: #62B4FF;
+                background: rgba(0, 0, 0, 0.25);
+            }
+        }
+        .active_item {
+            color: #42a4ff;
+            background: rgba(0, 0, 0, 0.25);
+            pointer-events: none;
+        }
+    }
+}
