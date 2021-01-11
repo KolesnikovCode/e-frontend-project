@@ -1,8 +1,8 @@
 import { Classes, Drawer, Position } from '@blueprintjs/core';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { ECategory } from '../../../../core/models/filters';
-import { setCategory } from '../../../../redux/actions';
+import { ECategory, EGenders } from '../../../../core/models/filters';
+import { resetShowItemsInCatalog, setCategory, setGender } from '../../../../redux/actions';
 import './filters.scss';
 
 const topFilters = [
@@ -82,13 +82,22 @@ const Filters = ({ isOpen, onClose }: IProps) => {
         onClose();
     };
 
-    const changeCategory = (category: string) => {
+    const selectCategory = (category: string) => {
         dispatch(setCategory(category));
+        dispatch(resetShowItemsInCatalog());
+        closeDrawer();
+        window.scroll(0, 0);
+    };
+
+    const selectGender = (gender: string) => {
+        dispatch(setGender(gender));
+        dispatch(resetShowItemsInCatalog());
         closeDrawer();
         window.scroll(0, 0);
     };
 
     const isActiveCategory = (filterName: string) => filterName === filters.category;
+    const isActiveGender = (filterName: string) => filterName === filters.gender;
 
     return (
         <Drawer
@@ -106,15 +115,15 @@ const Filters = ({ isOpen, onClose }: IProps) => {
                     
                     <div className="filters-container">
 
-                        <div className="filters-top">
-                            
+                        <div className="filters-section">
+                            <h3>Категория</h3>
                             {
                                 topFilters.map((item: any) => {
                                     return (
                                         <div
-                                            onClick={ () => changeCategory(item.category) }
+                                            onClick={ () => selectCategory(item.category) }
                                             key={ item.text }
-                                            className={ isActiveCategory(item.category) ? "filters-top-item active_item" : "filters-top-item" }
+                                            className={ isActiveCategory(item.category) ? "filters-section-item active_item" : "filters-section-item" }
                                         >
                                             { item.text }
                                         </div>
@@ -122,6 +131,30 @@ const Filters = ({ isOpen, onClose }: IProps) => {
                                 })
                             }
 
+                        </div>
+
+                        <div className="filters-section">
+                            <h3>Пол</h3>
+                            <div
+                                onClick={ () => selectGender(EGenders.ANY) }
+                                className={ isActiveGender(EGenders.ANY) ? "filters-section-item active_item" : "filters-section-item" }
+                            >
+                                Любой
+                            </div>
+                            
+                            <div
+                                onClick={ () => selectGender(EGenders.MALE) }
+                                className={ isActiveGender(EGenders.MALE) ? "filters-section-item active_item" : "filters-section-item" }
+                            >
+                                Мужской
+                            </div>
+
+                            <div
+                                onClick={ () => selectGender(EGenders.FEMALE) }
+                                className={ isActiveGender(EGenders.FEMALE) ? "filters-section-item active_item" : "filters-section-item" }
+                            >
+                                Женский
+                            </div>
                         </div>
 
                     </div>

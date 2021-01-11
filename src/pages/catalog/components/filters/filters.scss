@@ -1,5 +1,7 @@
 .bp3-drawer {
     background: none;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 1px 0px #000000;
     .bp3-heading {
         color: #fff;
     }
@@ -11,13 +13,20 @@
         display: flex;
         flex-direction: column;
     }
-    &-top {
+    &-section {
         border-radius: 40px;
         background: rgba(0, 0, 0, 0.25);
         padding: 17px;
         margin: -10px;
         font-weight: bold;
         font-size: 18px;
+        &:not(:first-child) {
+            margin-top: 27px;
+        }
+        h3 {
+            margin-top: 5px;
+            margin-left: 10px;
+        }
         &-item {
             margin: 10px;
             cursor: pointer;
