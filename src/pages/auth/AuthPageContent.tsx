@@ -18,7 +18,7 @@ const AuthPageContent = () => {
         try {
             setIsAuthRequestSending(true);
             const userResp = await firebase.auth().signInWithPopup(googleProvider);
-            console.log('userResp', userResp.user);
+
             if (userResp.user) {
                 dispatch(setUser(userResp.user));
                 history.push('/');

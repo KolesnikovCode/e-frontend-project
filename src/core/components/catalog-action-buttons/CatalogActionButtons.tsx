@@ -6,8 +6,8 @@ import { useHistory } from 'react-router-dom';
 
 interface IProps {
   backButtonRoute: string;
-  onClickToggleGridButton: () => void;
-  isMinimizeGrid: boolean;
+  onClickToggleGridButton?: () => void;
+  isMinimizeGrid?: boolean;
   isVisibleFiltersButton?: boolean;
   onClickFiltersButton?: () => void
 }
@@ -22,7 +22,9 @@ const CatalogActionButtons = ({ backButtonRoute, onClickToggleGridButton, isMini
   };
 
   const handleClickToToggleGridButton = () => {
-    onClickToggleGridButton();
+    if (typeof onClickToggleGridButton === 'function') {
+      onClickToggleGridButton();
+    }
   };
 
   const handleClickToFiltersButton = () => {
@@ -56,10 +58,14 @@ const CatalogActionButtons = ({ backButtonRoute, onClickToggleGridButton, isMini
           icon={ IconsEnum.arrow_back }
           onClick={ handleClickToBackButton }
         />
-        <ActionButton
-          icon={ isMinimizeGrid ? IconsEnum.maximize_grid : IconsEnum.minimize_grid }
-          onClick={ handleClickToToggleGridButton }
-        />
+        {
+          onClickToggleGridButton && (
+            <ActionButton
+              icon={ isMinimizeGrid ? IconsEnum.maximize_grid : IconsEnum.minimize_grid }
+              onClick={ handleClickToToggleGridButton }
+            />
+          )
+        }
         {
           isVisibleFiltersButton && (
             <ActionButton

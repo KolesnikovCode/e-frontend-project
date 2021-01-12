@@ -18,6 +18,7 @@ import CatalogPage from "./pages/catalog/CatalogPage";
 import ResultPage from "./pages/result/ResultPage";
 import LookPage from "./pages/look/LookPage";
 import AuthPage from "./pages/auth/AuthPage";
+import ProductPage from "./pages/product/ProductPage";
 
 // FIREBASE
 const firebaseConfig = {
@@ -88,7 +89,7 @@ const App = ({ history }: any) => {
             <Route path="/look/:id" exact component={ LookPage } />
             <Route path="/result" exact component={ ResultPage } />
             <Route path="/catalog" exact component={ CatalogPage } />
-            <Route path="/product/:id" exact component={ CatalogPage } />
+            <Route path="/product/:id" exact component={ ProductPage } />
           </PageContent>
         </Switch>
 

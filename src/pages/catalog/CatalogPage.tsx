@@ -22,7 +22,6 @@ const CatalogPage = () => {
       setIsLoaded(false);
 
       const productsResponse = await ProductsAPI.getRealProducts();
-      console.log('productsResponse', productsResponse);
       
       dispatch(setProducts(productsResponse.data));
 

@@ -1,3 +1,4 @@
 export default {
-  MAIN_PAGE: '/'
+  MAIN_PAGE: '/',
+  CATALOG_PAGE: '/catalog'
 };
