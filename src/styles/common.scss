@@ -15,10 +15,20 @@ html,body {
 body {
   margin: 0;
   font-family: 'Gilroy';
-  background: linear-gradient(180deg, #B4BCD2 -4.52%, #516A87 100%) no-repeat;
-  background-size: cover;
   width: 100%;
   min-height: 100vh;
+  z-index: 1;
+}
+
+.background-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, #B4BCD2 -4.52%, #516A87 100%) no-repeat;
+  background-size: cover;
+  z-index: 0;
 }
 
 button {

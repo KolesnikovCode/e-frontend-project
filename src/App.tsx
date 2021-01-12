@@ -75,7 +75,7 @@ const App = ({ history }: any) => {
       isLoaded={ isLoaded }
     >
       <>
-
+        <div className="background-gradient"></div>
         <Header />
 
         <Switch>
