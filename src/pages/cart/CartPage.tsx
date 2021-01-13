@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import LoaderWrapper from '../../core/components/loader-wrapper/LoaderWrapper';
+import { useTitlePage } from '../../core/hooks';
 import CartPageContent from './CartPageContent';
 
 const CartPage = () => {
@@ -9,6 +10,8 @@ const CartPage = () => {
 
     // Redux
     const cartProducts = useSelector((state: any) => state.cartProducts);
+
+    useTitlePage('E A S Y - Корзина');
 
     React.useEffect(() => {
         setIsLoaded(true);
