@@ -16,6 +16,32 @@
       }
     }
   }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    &__cart {
+      position: relative;
+      user-select: none;
+      cursor: pointer;
+      &__counter {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #62B4FF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 11px;
+        line-height: 11px;
+      }
+    }
+  }
 }
 
 .fixed {

@@ -4,6 +4,9 @@ import './product-info-card.scss';
 import { ReactComponent as FavoriteIcon } from '../../../../assets/images/buttons/favorite.svg';
 import { ReactComponent as LikeIcon } from '../../../../assets/images/buttons/like.svg';
 import { useTitlePage } from '../../../../core/hooks';
+import { useDispatch, useSelector } from 'react-redux';
+import { addProductInTheCart } from '../../../../redux/actions';
+import { addProductIdInLocalStorage } from '../../../../core/utils/localStorage';
 
 interface IProps {
     product: TProduct
@@ -13,11 +16,23 @@ const ProductInfoCard = ({ product }: IProps) => {
     // Local State
     const [activeImageurl, setActiveImageUrl] = React.useState<string>(product.images[0]);
 
+    // Redux
+    const dispatch = useDispatch();
+    const cartProducts = useSelector((state: any) => state.cartProducts);
+
     // Methods
     const checkIsActiveImage = (url: string, activeUrl: string) => url === activeUrl;
 
     const changeActiveImage = (url: string) => setActiveImageUrl(url);
 
+    const checkProductExistInTheCart = (product: TProduct, cartProductsList: Array<TProduct>) => {
+        return cartProductsList.some(prd => prd._id === product._id);
+    };
+
+    const addProductInCart = (product: TProduct) => {
+        dispatch(addProductInTheCart(product));
+        addProductIdInLocalStorage(product._id);
+    };
     
     useTitlePage(`E A S Y - ${ product.title }`);
     return (
@@ -52,11 +67,25 @@ const ProductInfoCard = ({ product }: IProps) => {
             </div>
 
             <div className="product-info-properties">
+
                 <div className="product-info-properties__brand">{ product.brand }</div>
                 <div className="product-info-properties__title">{ product.title }</div>
                 <div className="product-info-properties__price">{ product.price }₽</div>
                 <div className="product-info-properties__desc">{ product.description }</div>
                 <div className="product-info-properties__props">!Тут будут размеры и цвета Андрей!</div>
+
+                <div className="product-info-properties-actions">
+                    <div className="product-info-properties-actions__to-cart">
+                        <button
+                            type="button"
+                            onClick={ () => addProductInCart(product) }
+                            disabled={ checkProductExistInTheCart(product, cartProducts) }
+                        >
+                            { checkProductExistInTheCart(product, cartProducts) ? "в корзине" : "в корзину" }
+                        </button>
+                    </div>
+                </div>
+
             </div>
 
         </div>

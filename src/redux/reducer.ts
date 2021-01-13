@@ -8,6 +8,7 @@ import {
   ECategory
 } from '../core/models/filters';
 import { TAction } from '../core/models/action';
+import { TProduct } from "../core/models/product";
 
 const initialState = {
   user: null,
@@ -22,10 +23,11 @@ const initialState = {
   products: [],
   modalStep: 0,
   isQuizFinished: false,
-  showItemsInCatalogCount: 30
+  showItemsInCatalogCount: 30,
+  cartProducts: []
 };
 
-export default function(state = initialState, action: TAction) {
+export default function(state: any = initialState, action: TAction) {
   switch (action.type) {
     // FILTERS
     case actionTypes.SET_CATEGORY:
@@ -127,6 +129,26 @@ export default function(state = initialState, action: TAction) {
       return {
         ...state,
         products: action.payload
+      }
+    case actionTypes.ADD_PRODUCT_IN_THE_CART:
+      return {
+        ...state,
+        cartProducts: [
+          ...state.cartProducts,
+          action.payload
+        ]
+      }
+
+    case actionTypes.CLEAR_CART:
+      return {
+        ...state,
+        cartProducts: []
+      }
+    
+    case actionTypes.RESTORE_CART_FROM_LOCAL_STORAGE_IDS:
+      return {
+        ...state,
+        cartProducts: state.products.filter((prod: TProduct) => action.payload.some((idFromSessStor: string) => idFromSessStor === prod._id))
       }
     default:
       return state

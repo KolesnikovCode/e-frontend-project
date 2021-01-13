@@ -74,30 +74,57 @@ export const setUser = (user: TUser | any): TAction => {
     type: actionTypes.SET_USER,
     payload: user
   }
-}
+};
 
 export const setQuizFinished = (value: boolean): TAction => {
   return {
     type: actionTypes.SET_QUIZ_FINISHED,
     payload: value
   }
-}
+};
 
 export const setProducts = (products: Array<TProduct>): TAction => {
   return {
     type: actionTypes.SET_PRODUCTS,
     payload: products
   }
-}
+};
 
 export const incrementShowItemsInCatalog = (): TAction => {
   return {
     type: actionTypes.INCREMENT_SHOW_ITEMS_IN_CATALOG
   }
-}
+};
 
 export const resetShowItemsInCatalog = (): TAction => {
   return {
     type: actionTypes.RESET_SHOW_ITEMS_IN_CATALOG
   }
-}
+};
+
+export const addProductInTheCart = (product: TProduct): TAction => {
+  return {
+    type: actionTypes.ADD_PRODUCT_IN_THE_CART,
+    payload: product
+  }
+};
+
+export const removeProductFromCart = (product: TProduct): TAction => {
+  return {
+    type: actionTypes.REMOVE_PRODUCT_FROM_CART,
+    payload: product
+  }
+};
+
+export const restoreCartFromLocalStorageIds = (ids: Array<string>) => {
+  return {
+    type: actionTypes.RESTORE_CART_FROM_LOCAL_STORAGE_IDS,
+    payload: ids
+  }
+};
+
+export const clearCart = (): TAction => {
+  return {
+    type: actionTypes.CLEAR_CART
+  }
+};

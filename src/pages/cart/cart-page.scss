@@ -1,0 +1,48 @@
+.cart {
+    &-wrapper {
+        padding: 0 80px;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+    &-products {
+        margin: -15px;
+        .product-card {
+            box-sizing: border-box;
+            max-width: 90%;
+            margin: 15px;
+            &-image {
+                height: 260px;
+            }
+        }
+    }
+    &-info {
+        display: flex;
+        flex-direction: column;
+        &-block {
+            position: sticky;
+            top: 60px;
+            button {
+                width: 200px;
+                height: 65px;
+                background: rgb(199, 109, 109);
+                border-radius: 40px;
+                cursor: pointer;
+            }
+            &__sum {
+                font-size: 22px;
+                padding-top: 30px;
+            }
+        }
+    }
+    &-empty {
+        h3 {
+            color: #fff;
+            font-size: 24px;
+        }
+        a {
+            color: #fff;
+            font-size: 22px;
+            text-decoration: underline;
+        }
+    }
+}

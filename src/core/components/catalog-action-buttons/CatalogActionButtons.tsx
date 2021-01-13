@@ -3,18 +3,33 @@ import { IconsEnum } from '../../models/icons';
 import ActionButton from '../action-button/ActionButton';
 import './catalogActionButtons.scss';
 import { useHistory } from 'react-router-dom';
+import routes from '../../routes';
+import { useSelector } from 'react-redux';
 
 interface IProps {
   backButtonRoute: string;
   onClickToggleGridButton?: () => void;
   isMinimizeGrid?: boolean;
   isVisibleFiltersButton?: boolean;
+  isVisibleCartButton?: boolean;
   onClickFiltersButton?: () => void
 }
 
-const CatalogActionButtons = ({ backButtonRoute, onClickToggleGridButton, isMinimizeGrid, isVisibleFiltersButton, onClickFiltersButton }: IProps) => {
+const CatalogActionButtons = ({
+  backButtonRoute,
+  onClickToggleGridButton,
+  isMinimizeGrid,
+  isVisibleFiltersButton,
+  isVisibleCartButton = true,
+  onClickFiltersButton
+}: IProps) => {
   // common
   const routerHistory = useHistory();
+  
+  // Redux
+  const cartProducts = useSelector((state: any) => state.cartProducts)
+  // Local State
+  const [isFixedPosition, setIsFixedPosition] = React.useState<boolean>(false);
 
   // Methods
   const handleClickToBackButton = () => {
@@ -32,9 +47,10 @@ const CatalogActionButtons = ({ backButtonRoute, onClickToggleGridButton, isMini
       onClickFiltersButton();
     }
   };
-  
-  // Fixed buttons position
-  const [isFixedPosition, setIsFixedPosition] = React.useState<boolean>(false);
+
+  const handleClickToCartButton = () => {
+    routerHistory.push(routes.CART);
+  };
 
   const handleScroll = () => {
     if (window.scrollY >= 30) {
@@ -76,7 +92,22 @@ const CatalogActionButtons = ({ backButtonRoute, onClickToggleGridButton, isMini
         }
       </div>
       <div className="catalog-action-buttons__right">
-        Right btns
+        {
+          isVisibleCartButton && (
+            <div className="catalog-action-buttons__right__cart">
+              <ActionButton
+                icon={ IconsEnum.cart }
+                onClick={ handleClickToCartButton }
+              />
+              <div
+                className="catalog-action-buttons__right__cart__counter"
+                title={ `${cartProducts.length} товаров в корзине` }
+              >
+                { cartProducts.length < 10 ? cartProducts.length : '9+' }
+              </div>
+            </div>
+          )
+        }
       </div>
     </div>
   )

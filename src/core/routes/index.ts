@@ -1,4 +1,5 @@
 export default {
   MAIN_PAGE: '/',
-  CATALOG_PAGE: '/catalog'
+  CATALOG_PAGE: '/catalog',
+  CART: '/cart'
 };
