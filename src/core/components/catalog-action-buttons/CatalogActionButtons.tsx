@@ -99,12 +99,16 @@ const CatalogActionButtons = ({
                 icon={ IconsEnum.cart }
                 onClick={ handleClickToCartButton }
               />
-              <div
-                className="catalog-action-buttons__right__cart__counter"
-                title={ `${cartProducts.length} товаров в корзине` }
-              >
-                { cartProducts.length < 10 ? cartProducts.length : '9+' }
-              </div>
+              {
+                cartProducts.length > 0 && (
+                  <div
+                    className="catalog-action-buttons__right__cart__counter"
+                    title={ `${cartProducts.length} товаров в корзине` }
+                  >
+                    { cartProducts.length < 10 ? cartProducts.length : '9+' }
+                  </div>
+                )
+              }
             </div>
           )
         }
