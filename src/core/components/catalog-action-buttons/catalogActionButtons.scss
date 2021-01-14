@@ -4,8 +4,9 @@
   display: flex;
   justify-content: space-between;
   font-weight: bold;
-  height: 0;
-  transition: all .5s ease-in-out;
+  height: 1px;
+  overflow: visible;
+  transition: all 1s ease;
   &__left {
     display: flex;
     flex-direction: column;

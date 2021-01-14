@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { incrementModalStep, setConstitution } from '../../../../../redux/actions'
+import { incrementModalStep, setQuizConstitution } from '../../../../../redux/actions'
 import { EConstitution } from '../../../../../core/models/filters'
 
 const ConstitutionStep = () => {
@@ -8,7 +8,7 @@ const ConstitutionStep = () => {
   const dispatch = useDispatch()
 
   const handleChoseConstitution = (constitution: string) => {
-    dispatch(setConstitution(constitution))
+    dispatch(setQuizConstitution(constitution))
     dispatch(incrementModalStep())
   }
 

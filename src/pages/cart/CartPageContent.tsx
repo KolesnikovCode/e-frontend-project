@@ -8,6 +8,7 @@ import ProductCard from '../../core/components/product-card/ProductCard';
 import { useDispatch } from 'react-redux';
 import { clearCart } from '../../redux/actions';
 import { clearCartProductIdsFromLocalStorage } from '../../core/utils/localStorage';
+import CatalogActionButtons from '../../core/components/catalog-action-buttons/CatalogActionButtons';
 
 interface IProps {
     products: Array<TProduct>
@@ -24,11 +25,16 @@ const CartPageContent = ({ products }: IProps) => {
     const resetCart = () => {
         dispatch(clearCart());
         clearCartProductIdsFromLocalStorage();
+        window.scrollTo(0, 0);
     }
 
     return (
         <div className="cart">
             <ContentContainer>
+
+                <CatalogActionButtons
+                    isVisibleCartButton={ false }
+                />
 
                 <div className="cart-wrapper">
 

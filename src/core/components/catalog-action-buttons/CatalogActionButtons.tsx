@@ -7,7 +7,8 @@ import routes from '../../routes';
 import { useSelector } from 'react-redux';
 
 interface IProps {
-  backButtonRoute: string;
+  backButtonRoute?: string;
+  onClickBackButton?: () => void;
   onClickToggleGridButton?: () => void;
   isMinimizeGrid?: boolean;
   isVisibleFiltersButton?: boolean;
@@ -17,6 +18,7 @@ interface IProps {
 
 const CatalogActionButtons = ({
   backButtonRoute,
+  onClickBackButton = undefined,
   onClickToggleGridButton,
   isMinimizeGrid,
   isVisibleFiltersButton,
@@ -25,7 +27,6 @@ const CatalogActionButtons = ({
 }: IProps) => {
   // common
   const routerHistory = useHistory();
-  
   // Redux
   const cartProducts = useSelector((state: any) => state.cartProducts)
   // Local State
@@ -33,7 +34,11 @@ const CatalogActionButtons = ({
 
   // Methods
   const handleClickToBackButton = () => {
-    routerHistory.push(backButtonRoute);
+    if (backButtonRoute) {
+      routerHistory.push(backButtonRoute);
+    } else {
+      return routerHistory.length > 2 ? routerHistory.goBack() : routerHistory.push('/');
+    }
   };
 
   const handleClickToToggleGridButton = () => {
@@ -72,7 +77,7 @@ const CatalogActionButtons = ({
       <div className="catalog-action-buttons__left">
         <ActionButton
           icon={ IconsEnum.arrow_back }
-          onClick={ handleClickToBackButton }
+          onClick={ onClickBackButton ? onClickBackButton : handleClickToBackButton }
         />
         {
           onClickToggleGridButton && (

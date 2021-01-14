@@ -2,8 +2,10 @@ import { Classes, Drawer, Position } from '@blueprintjs/core';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { ECategory, EGenders } from '../../../../core/models/filters';
-import { resetShowItemsInCatalog, setCategory, setGender } from '../../../../redux/actions';
+import { resetShowItemsInCatalog, setCategory, setFilters, setGender } from '../../../../redux/actions';
 import './filters.scss';
+import queryString from 'query-string';
+import { useHistory } from 'react-router-dom';
 
 const topFilters = [
     {
@@ -74,10 +76,14 @@ interface IProps {
 }
 
 const Filters = ({ isOpen, onClose }: IProps) => {
-    const dispatch = useDispatch();
+    // Router
+    const routerHistory = useHistory();
 
+    // Redux
+    const dispatch = useDispatch();
     const filters = useSelector((state: any) => state.filters);
 
+    // Methods
     const closeDrawer = () => {
         onClose();
     };
@@ -98,6 +104,25 @@ const Filters = ({ isOpen, onClose }: IProps) => {
 
     const isActiveCategory = (filterName: string) => filterName === filters.category;
     const isActiveGender = (filterName: string) => filterName === filters.gender;
+
+    // Check for exists query filters
+    React.useEffect(() => {
+        const querySearch = routerHistory.location.search;
+
+        if (querySearch) {
+            const filtersFromParsedQuery: any = queryString.parse(querySearch);
+            dispatch(setFilters(filtersFromParsedQuery));
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    // Set filters in query
+    React.useEffect(() => {
+        const filtersQueryStr = queryString.stringify(filters);
+
+        routerHistory.push({ search: filtersQueryStr });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [filters]);
 
     return (
         <Drawer

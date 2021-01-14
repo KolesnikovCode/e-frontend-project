@@ -9,6 +9,25 @@
     box-sizing: border-box;
     width: 100%;
     max-width: 500px;
+    position: relative;
+    &-exist-in-cart {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        background: #e6f3ff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            width: 15px;
+            path {
+                stroke: #62B4FF !important;
+            }
+        }
+    }
     &-image {
         display: flex;
         justify-content: center;

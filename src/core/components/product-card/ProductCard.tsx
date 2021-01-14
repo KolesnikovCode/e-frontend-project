@@ -5,6 +5,8 @@ import { ReactComponent as FavoriteIcon } from '../../../assets/images/buttons/f
 import { ReactComponent as LikeIcon } from '../../../assets/images/buttons/like.svg';
 import { ReactComponent as ArrowRightIcon } from '../../../assets/images/buttons/arrow-right.svg';
 import { TProduct } from '../../models/product';
+import { useSelector } from 'react-redux';
+import { ReactComponent as CartIcon } from '../../../assets/images/buttons/cart.svg';
 
 interface IProps {
     isBigCard?: boolean,
@@ -12,8 +14,23 @@ interface IProps {
 }
 
 const ProductCard = ({ isBigCard = false, product }: IProps) => {
+    // Redux
+    const cartProducts = useSelector((state: any) => state.cartProducts)
+
+    const checkProductExistInTheCart = (product: TProduct, cartProductsList: Array<TProduct>) => {
+        return cartProductsList.some(prd => prd._id === product._id);
+    };
+
     return (
         <div className={ isBigCard ? "product-card big-card": "product-card" }>
+
+            {
+                checkProductExistInTheCart(product, cartProducts) && (
+                    <div className="product-card-exist-in-cart" title="Товар добавлен в корзину">
+                        <CartIcon />
+                    </div>
+                )
+            }
 
             <div className="product-card-image">
                 <img src={ `http://api.youreasy.ru/files/${product.images[0]}` } alt="product" />

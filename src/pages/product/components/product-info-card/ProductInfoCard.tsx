@@ -5,8 +5,8 @@ import { ReactComponent as FavoriteIcon } from '../../../../assets/images/button
 import { ReactComponent as LikeIcon } from '../../../../assets/images/buttons/like.svg';
 import { useTitlePage } from '../../../../core/hooks';
 import { useDispatch, useSelector } from 'react-redux';
-import { addProductInTheCart } from '../../../../redux/actions';
-import { addProductIdInLocalStorage } from '../../../../core/utils/localStorage';
+import { addProductInTheCart, removeProductFromCart } from '../../../../redux/actions';
+import { addProductIdInLocalStorage, removeProductIdInLocalStorage } from '../../../../core/utils/localStorage';
 
 interface IProps {
     product: TProduct
@@ -33,6 +33,11 @@ const ProductInfoCard = ({ product }: IProps) => {
         dispatch(addProductInTheCart(product));
         addProductIdInLocalStorage(product._id);
     };
+
+    const deleteProductFromCart = (product: TProduct) => {
+        dispatch(removeProductFromCart(product));
+        removeProductIdInLocalStorage(product._id);
+    }
     
     useTitlePage(`E A S Y - ${ product.title }`);
     return (
@@ -75,13 +80,12 @@ const ProductInfoCard = ({ product }: IProps) => {
                 <div className="product-info-properties__props">!Тут будут размеры и цвета Андрей!</div>
 
                 <div className="product-info-properties-actions">
-                    <div className="product-info-properties-actions__to-cart">
+                    <div className={ checkProductExistInTheCart(product, cartProducts) ? "product-info-properties-actions__to-cart remove" : "product-info-properties-actions__to-cart" }>
                         <button
                             type="button"
-                            onClick={ () => addProductInCart(product) }
-                            disabled={ checkProductExistInTheCart(product, cartProducts) }
+                            onClick={ () => checkProductExistInTheCart(product, cartProducts) ? deleteProductFromCart(product) : addProductInCart(product) }
                         >
-                            { checkProductExistInTheCart(product, cartProducts) ? "в корзине" : "в корзину" }
+                            { checkProductExistInTheCart(product, cartProducts) ? "удалить" : "в корзину" }
                         </button>
                     </div>
                 </div>

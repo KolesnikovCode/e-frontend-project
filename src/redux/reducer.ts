@@ -23,13 +23,21 @@ const initialState = {
   products: [],
   modalStep: 0,
   isQuizFinished: false,
+  quizFilters: {
+    category: ECategory.ANY,
+    gender: EGenders.ANY,
+    constitution: EConstitution.ANY,
+    event: EEvent.ANY,
+    tone: ETone.ANY,
+    priceCategory: EPrice.ANY
+  },
   showItemsInCatalogCount: 30,
   cartProducts: []
 };
 
 export default function(state: any = initialState, action: TAction) {
   switch (action.type) {
-    // FILTERS
+    // ----------------------FILTERS
     case actionTypes.SET_CATEGORY:
       return {
         ...state,
@@ -78,6 +86,17 @@ export default function(state: any = initialState, action: TAction) {
           priceCategory: action.payload
         }
       }
+    case actionTypes.SET_FILTERS:
+      return {
+        ...state,
+        filters: action.payload
+      }
+    case actionTypes.RESET_TO_DEFAULT_FILTERS:
+      return {
+        ...state,
+        filters: initialState.filters,
+      }
+    // ----------------------MODAL
     case actionTypes.INCREMENT_MODAL_STEP:
       return {
         ...state,
@@ -94,17 +113,66 @@ export default function(state: any = initialState, action: TAction) {
         filters: initialState.filters,
         modalStep: 0
       }
-    case actionTypes.RESET_TO_DEFAULT_FILTERS:
-      return {
-        ...state,
-        filters: initialState.filters,
-      }
+    // ----------------------QUIZ
     case actionTypes.SET_QUIZ_FINISHED:
       return {
         ...state,
         isQuizFinished: action.payload
       }
-    // CATALOG
+    case actionTypes.SET_QUIZ_CATEGORY:
+      return {
+        ...state,
+        quizFilters: {
+          ...state.quizFilters,
+          category: action.payload
+        }
+      }
+    case actionTypes.SET_QUIZ_GENDER:
+      return {
+        ...state,
+        quizFilters: {
+          ...state.quizFilters,
+          gender: action.payload
+        }
+      }
+    case actionTypes.SET_QUIZ_CONSTITUTION:
+      return {
+        ...state,
+        quizFilters: {
+          ...state.quizFilters,
+          constitution: action.payload
+        }
+      }
+    case actionTypes.SET_QUIZ_EVENT:
+      return {
+        ...state,
+        quizFilters: {
+          ...state.quizFilters,
+          event: action.payload
+        }
+      }
+    case actionTypes.SET_QUIZ_TONE:
+      return {
+        ...state,
+        quizFilters: {
+          ...state.quizFilters,
+          tone: action.payload
+        }
+      }
+    case actionTypes.SET_QUIZ_PRICE_CATEGORY:
+      return {
+        ...state,
+        quizFilters: {
+          ...state.quizFilters,
+          priceCategory: action.payload
+        }
+      }
+    case actionTypes.RESET_TO_DEFAULT_QUIZ_FILTERS:
+      return {
+        ...state,
+        quizFilters: initialState.quizFilters,
+      }
+    // ----------------------CATALOG
     case actionTypes.INCREMENT_SHOW_ITEMS_IN_CATALOG:
       return {
         ...state,
@@ -115,7 +183,7 @@ export default function(state: any = initialState, action: TAction) {
         ...state,
         showItemsInCatalogCount: 30
       }
-    // USER
+    // ----------------------USER
     case actionTypes.SET_USER:
       return {
         ...state,
@@ -124,12 +192,14 @@ export default function(state: any = initialState, action: TAction) {
         }
       }
 
-    // PRODUCTS
+    // ----------------------PRODUCTS
     case actionTypes.SET_PRODUCTS:
       return {
         ...state,
         products: action.payload
       }
+
+    // ----------------------CART
     case actionTypes.ADD_PRODUCT_IN_THE_CART:
       return {
         ...state,
@@ -137,6 +207,12 @@ export default function(state: any = initialState, action: TAction) {
           ...state.cartProducts,
           action.payload
         ]
+      }
+
+    case actionTypes.REMOVE_PRODUCT_FROM_CART:
+      return {
+        ...state,
+        cartProducts: state.cartProducts.filter((prod: TProduct) => prod._id !== action.payload._id)
       }
 
     case actionTypes.CLEAR_CART:

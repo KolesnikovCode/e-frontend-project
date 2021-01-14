@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { setPriceCategory, setQuizFinished } from '../../../../../redux/actions'
+import { setQuizPriceCategory, setQuizFinished } from '../../../../../redux/actions'
 import { EPrice } from '../../../../../core/models/filters'
 import { useHistory } from 'react-router-dom'
 
@@ -9,7 +9,7 @@ const PriceStep = () => {
   const routerHistory = useHistory()
 
   const handleChosePriceCategory = (priceCategory: string) => {
-    dispatch(setPriceCategory(priceCategory));
+    dispatch(setQuizPriceCategory(priceCategory));
     dispatch(setQuizFinished(true));
     routerHistory.push(`/result`);
   }

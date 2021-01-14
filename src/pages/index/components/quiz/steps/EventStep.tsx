@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { incrementModalStep, setEvent } from '../../../../../redux/actions'
+import { incrementModalStep, setQuizEvent } from '../../../../../redux/actions'
 import { EEvent } from '../../../../../core/models/filters'
 
 const EventStep = () => {
@@ -8,7 +8,7 @@ const EventStep = () => {
   const dispatch = useDispatch()
 
   const handleChoseEvent = (event: string) => {
-    dispatch(setEvent(event))
+    dispatch(setQuizEvent(event))
     dispatch(incrementModalStep())
   }
 

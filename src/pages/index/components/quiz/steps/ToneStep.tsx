@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { incrementModalStep, setTone } from '../../../../../redux/actions'
+import { incrementModalStep, setQuizTone } from '../../../../../redux/actions'
 import { ETone } from '../../../../../core/models/filters'
 
 const ToneStep = () => {
@@ -8,7 +8,7 @@ const ToneStep = () => {
   const dispatch = useDispatch()
 
   const handleChoseTone = (gender: string) => {
-    dispatch(setTone(gender))
+    dispatch(setQuizTone(gender))
     dispatch(incrementModalStep())
   }
 

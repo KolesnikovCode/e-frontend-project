@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { incrementModalStep, setGender } from '../../../../../redux/actions'
+import { incrementModalStep, setQuizGender } from '../../../../../redux/actions'
 import { EGenders } from '../../../../../core/models/filters'
 
 const GenderStep = () => {
@@ -8,7 +8,7 @@ const GenderStep = () => {
   const dispatch = useDispatch()
 
   const handleChoseGender = (gender: string) => {
-    dispatch(setGender(gender))
+    dispatch(setQuizGender(gender))
     dispatch(incrementModalStep())
   }
 
