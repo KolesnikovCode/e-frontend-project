@@ -110,6 +110,7 @@
                     background: rgba(0, 0, 0, 0.25);
                     top: calc(100% + 6px);
                     border-radius: 40px;
+                    animation: myFadeIn .3s ease-in-out;
                 }
             }
         }
@@ -188,5 +189,20 @@
                 }
             }
         }
+    }
+}
+
+
+@keyframes myFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    80% {
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import ContentContainer from '../../core/layouts/content-container/ContentContainer';
 import { TProduct } from '../../core/models/product';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './cart-page.scss';
 import routes from '../../core/routes';
 import ProductCard from '../../core/components/product-card/ProductCard';
@@ -26,7 +26,7 @@ const CartPageContent = ({ products }: IProps) => {
         dispatch(clearCart());
         clearCartProductIdsFromLocalStorage();
         window.scrollTo(0, 0);
-    }
+    };
 
     return (
         <div className="cart">

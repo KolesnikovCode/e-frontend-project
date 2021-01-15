@@ -27,7 +27,7 @@ const ProductCard = ({ isBigCard = false, product }: IProps) => {
             {
                 checkProductExistInTheCart(product, cartProducts) && (
                     <div className="product-card-exist-in-cart" title="Товар добавлен в корзину">
-                        <CartIcon />
+                        <CartIcon title="Товар добавлен в корзину" />
                     </div>
                 )
             }

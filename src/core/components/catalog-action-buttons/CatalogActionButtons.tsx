@@ -109,6 +109,7 @@ const CatalogActionButtons = ({
                   <div
                     className="catalog-action-buttons__right__cart__counter"
                     title={ `${cartProducts.length} товаров в корзине` }
+                    onClick={ () => handleClickToCartButton() }
                   >
                     { cartProducts.length < 10 ? cartProducts.length : '9+' }
                   </div>

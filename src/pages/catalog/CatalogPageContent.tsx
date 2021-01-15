@@ -45,7 +45,6 @@ const CatalogPageContent = ({ products }: IProps) => {
 
     return () => {
       window.removeEventListener('scroll', incrementShowItemsCoutOnScroll);
-      dispatch(resetShowItemsInCatalog());
       dispatch(resetToDefaultFilters())
     };
     // eslint-disable-next-line
